@@ -32,8 +32,28 @@
 {% block styles %}
     {{ super() }}
 
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300italic,700|Lato:400italic' rel='stylesheet' type='text/css'>
     <link href="{{ load_asset('stylesheets/style.css') }}" media="screen" rel="stylesheet" type="text/css" charset="utf-8">
 {% endblock %} 
+
+{% block nav_bar %}
+    {% include 'partials/navigation.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="ink-grid">
+    <div class="column-group gutters">
+        <div class="large-20 medium-100 small-100">
+            <aside id="sidebar">
+                {% include 'partials/sidebar.html' %}
+            </aside>
+        </div>
+        <div class="large-80 medium-100 small-100">
+            {% block blog_content %}{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 {% block scripts %}
     {{ super() }}
