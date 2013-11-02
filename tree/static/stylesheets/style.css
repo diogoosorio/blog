@@ -8,9 +8,12 @@ hr {
     margin-bottom: 1.3em;
 }
 
+.second-anchor-transition a {
+    transition: all 1s ease;
+}
+
 article header a {
     color: #383838;
-    transition: all 1s ease;
 }
 
 article header h1,
@@ -30,8 +33,14 @@ article .content p {
     font-size: 1.1em;
 }
 
-article .content a {
+article .content p a,
+a.green {
     color: #25947C;
+}
+
+article footer {
+    background: none;
+    border: none;
 }
 
 @media screen and (min-width: 960px) {
@@ -98,9 +107,9 @@ article .content a {
     margin-bottom: 2em;
 }
 
-#social-icons li {
-    margin: 0 0.3em;
+.inline-list li {
     display: inline;
+    margin: 0 0.3em;
 }
 
 #social-icons li:first-child {
