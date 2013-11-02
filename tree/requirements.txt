@@ -1,0 +1,4 @@
+Flask==0.10.1
+
+flask_ink
+git+https://github.com/diogoosorio/flask-sapo-ink.git@master#egg=flask_ink
