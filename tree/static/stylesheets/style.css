@@ -23,10 +23,6 @@ hr {
     margin-top: 0;
 }
 
-.blogroll article:last-child {
-    border-bottom: none;
-}
-
 article header a {
     color: #383838;
 }
