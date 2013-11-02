@@ -1,6 +1,41 @@
 #!/usr/env/python
 # -*- coding: utf-8 -*-
 
-from flask import Flask
-from ink_flask import Ink
+from flask import Flask, redirect, render_template, url_for
+from flask_ink.ink import Ink
 from settings import Settings
+
+app = Flask(__name__)
+app.config.update(Settings)
+
+
+def load_asset(filename):
+    environment = app.config['ENVIRONMENT']
+
+    if environment != 'development':
+        filename = '%s.min.%s' % tuple(filename.rsplit('.', 1))
+
+    return url_for('static', filename=filename)
+
+
+@app.route('/')
+def index():
+    return redirect('/blog', 301)
+
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
+@app.route('/blog/rss')
+def rss():
+    return 'RSS'
+
+@app.route('/blog/entry/<post_name>')
+def blog_detail(post_name):
+    return post_name
+
+if __name__ == '__main__':
+    Ink(app)
+
+    app.jinja_env.globals.update(load_asset=load_asset)
+    app.run(host=Settings['HOST'])
