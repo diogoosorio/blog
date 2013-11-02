@@ -1,0 +1,24 @@
+#!/usr/env/python
+# -*- coding: utf-8 -*-
+
+import os
+
+environment = os.environ.get('ENVIRONMENT')
+environemnt = environment.lower() if environment is not None else 'production'
+
+Settings = dict()
+Settings = {
+    'DEBUG': False,
+    'TESTING': False,
+    'SECRET_KEY': 'sample-secret-key',
+    'SESSION_COOKIE_DOMAIN': 'diogoosorio.com',
+    'SESSION_COOKIE_HTTPONLY': True,
+    'SESSION_COOKIE_SECURE': False,
+    'SERVER_NAME': 'diogoosorio.com'
+}
+
+if environment == 'development':
+    Settings['DEBUG'] = True
+    Settings['TESTING'] = True
+    Settings['SESSION_COOKIE_DOMAIN'] = None,
+    Settings['SERVER_NAME'] = None
