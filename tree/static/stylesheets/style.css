@@ -3,6 +3,37 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+hr {
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+}
+
+article header a {
+    color: #383838;
+    transition: all 1s ease;
+}
+
+article header h1,
+article header h1:hover {
+    color: inherit !important;
+}
+
+article header a:hover {
+    color: #25947C;
+    text-decoration: none;
+}
+
+article .content p {
+    font-weight: 200;
+    line-height: 2.3em;
+    margin-bottom: 3em;
+    font-size: 1.1em;
+}
+
+article .content a {
+    color: #25947C;
+}
+
 @media screen and (min-width: 960px) {
     .content-nocenter-large {
         text-align: inherit;
