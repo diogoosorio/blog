@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block blog_content %}
-<section>
+<section class="blogroll">
     <div class="column-group gutters vertical-space">
         <div class="large-100 medium-100 small-100">
-            {% include 'partials/blog/entry.html' %}
+            {% for i in range(1, 5) %}
+                {% include 'partials/blog/entry.html' %}
+            {% endfor %}
         </div>
     </div>
 </section>

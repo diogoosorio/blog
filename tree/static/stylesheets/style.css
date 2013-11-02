@@ -12,6 +12,21 @@ hr {
     transition: all 1s ease;
 }
 
+.blogroll article {
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3em;
+    margin-top: 3em;
+}
+
+.blogroll article:first-child {
+    margin-top: 0;
+}
+
+.blogroll article:last-child {
+    border-bottom: none;
+}
+
 article header a {
     color: #383838;
 }
