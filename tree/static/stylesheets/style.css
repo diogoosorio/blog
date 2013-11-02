@@ -130,3 +130,22 @@ article footer {
 #social-icons li:first-child {
     margin: 0 0.3em 0 0;
 }
+
+.ink-navigation ul.separated li {
+    margin: 0 0.2em;
+}
+
+.subtract-top-margin {
+    margin-top: 0;
+}
+
+ul.pagination.rounded.separated li:last-child,
+ul.pagination.rounded.separated li:first-child,
+ul.pagination.rounded.separated li,
+ul.pagination.rounded.separated li a:hover {
+    border-radius: 4px;
+}
+
+ul.pagination.rounded.separated li a {
+    padding: 0.3em 0.6em;
+}
