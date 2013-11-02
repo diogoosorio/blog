@@ -1,19 +1,44 @@
-<section class="vcard content-center content-nocenter-large">
-    <div>
-        <a href="{{ url_for('blog') }}">
-            <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Diogo's avatar" id="avatar">
-        </a>
-    </div>
+<section class="vcard">
+    <div class="column-group content-center content-nocenter-large">
+        <div class="large-100 small-100 medium-100">
+            <a href="{{ url_for('blog') }}">
+                <img src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Diogo's avatar" id="avatar">
+            </a>
+        </div>
 
-    <div class="vertical-space">
-        <h6>Diogo Osório</h6>
+        <div class="vertical-space">
+            <h6>Diogo Osório</h6>
 
-        <p class="small">
-            <em>Developer, geek, idiot, web aficionado</em>
-        </p>
-    </div>
+            <p class="small">
+                <em>Developer, geek, idiot, web aficionado</em>
+            </p>
+        </div>
 
-    <div class="show-all hide-large">
-        <hr>
+        <div class="gray large-100 small-100 medium-100 ink-clear push-center">
+            <ul id="social-icons" class="unstyled inline">
+                <li>
+                    <a href="http://github.com/diogoosorio" target="_blank">
+                        <i class="icon-github-sign icon-very-large"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://www.linkedin.com/in/diogoosorio" target="_blank">
+                        <i class="icon-linkedin-sign icon-very-large"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://facebook.com/diogoosorio" target="_blank">
+                        <i class="icon-facebook-sign icon-very-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="large-100 small-100 medim-100 show-all hide-large">
+            <hr>
+        </div>
     </div>
+</div>
 </section>
