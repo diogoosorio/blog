@@ -14,7 +14,11 @@ Settings = {
     'SESSION_COOKIE_DOMAIN': 'diogoosorio.com',
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
-    'SERVER_NAME': 'diogoosorio.com'
+    'SERVER_NAME': 'diogoosorio.com',
+    'INK_ASSET_MINIFY': True,
+    'INK_ASSET_VERSION': '2.2.1',
+    'INK_ASSET_DEFAULT_LOCATION': 'local',
+    'ENVIRONMENT': environment
 }
 
 if environment == 'development':
@@ -23,3 +27,4 @@ if environment == 'development':
     Settings['SESSION_COOKIE_DOMAIN'] = None,
     Settings['SERVER_NAME'] = None
     Settings['HOST'] = '0.0.0.0'
+    Settings['INK_ASSET_MINIFY'] = False
