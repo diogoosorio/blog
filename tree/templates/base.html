@@ -1,0 +1,41 @@
+{% extends 'ink/base.html' %}
+
+{% set default_description = 'Personal thoughts and rants about programming, web development, entreperneurship and whatever else I happen to think about everyday.' %}
+{% set default_kyewords = 'web development, programming, Diogo Osório, product, entreperneurship, php, python' %}
+{% set default_title = 'Web, Development, Ideas, Rants | Diogo Osório' %}
+
+{% block title %}
+    {{ title|default(default_title) }}
+{% endblock %}
+
+{% block metas %}
+    {{ super() }}
+    <meta name="description" content="{{ description|default(default_description) }}">
+    <meta name="keywords" content="{{ keywords|default(default_keywords) }}">
+
+    <!-- G+ -->
+    <link rel="author" href="https://plus.google.com/110545714785609730327">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="{{ title|default(default_title) }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ request_url }}">
+    <meta property="og:description" content="{{ description|default(default_description) }}">
+    <meta property="fb:admins" content="100000054831465">
+
+    <!-- SO MANY SOCIAL NETWORKS, WHO THE FUCK WILL USE THIS ANYWAY? -->
+    <meta name="twitter:url" content="{{ request.url }}">
+    <meta name="twitter:title" content="{{ title|default(default_title) }}">
+    <meta name="twitter:description" content="{{ description|default(default_description) }}">
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+
+    <link href="{{ load_asset('stylesheets/style.css') }}" media="screen" rel="stylesheet" type="text/css" charset="utf-8">
+{% endblock %} 
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ load_asset('javascript/app.js') }}"></script>
+{% endblock %}
