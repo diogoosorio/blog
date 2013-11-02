@@ -1,0 +1,57 @@
+body {
+    color: #555;
+    font-family: 'Merriweather', serif;
+}
+
+@media screen and (min-width: 960px) {
+    .content-nocenter-large {
+        text-align: inherit;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 959px) {
+}
+
+@media screen and (max-width: 649px) {
+}
+
+#avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    overflow: hidden;
+}
+
+.gray a {
+    font-family: inherit;
+    color: inherit;
+    color: #999;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.gray a.active {
+    color: #383838;
+}
+
+.gray a:hover {
+    color: #383838;
+    text-decoration: none;
+}
+
+.lato {
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+.border-bottom {
+    border-bottom-width: 1px solid;
+    border-bottom-style: solid;
+}
+
+#navbar {
+    border-color: #eeeeee;
+    margin-bottom: 2em;
+}
