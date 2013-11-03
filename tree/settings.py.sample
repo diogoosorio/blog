@@ -18,7 +18,11 @@ Settings = {
     'INK_ASSET_MINIFY': True,
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',
-    'ENVIRONMENT': environment
+    'ENVIRONMENT': environment,
+    'CACHE_TYPE': 'simple',
+    'CACHE_DEFAULT_TIMEOUT': 25,
+    'CACHE_KEY_PREFIX': 'diogoo_blog_',
+    'CACHE_DIR': '/tmp/diogoosorio.com/cache'
 }
 
 if environment == 'development':
@@ -28,3 +32,4 @@ if environment == 'development':
     Settings['SERVER_NAME'] = None
     Settings['HOST'] = '0.0.0.0'
     Settings['INK_ASSET_MINIFY'] = False
+    Settings['CACHE_TYPE'] = 'null'
