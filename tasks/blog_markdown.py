@@ -7,9 +7,10 @@ import pymongo
 import math
 import html2text
 import os
+import re
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-ENTRIES_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir, 'entries'))
+ENTRIES_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir, 'content', 'entries'))
 
 def entries():
     client = pymongo.MongoClient()
@@ -18,8 +19,11 @@ def entries():
 
 def extract_metadata(item):
     html_meta = item['seo'] if 'seo' in item and type(item['seo']) is dict else {}
+    create_date = date.fromtimestamp(item.get('added'))
+
+    h = html2text.HTML2Text()
     meta = {
-        'create_date': date.fromtimestamp(item.get('added')),
+        'create_date': create_date.isoformat(),
         'title': html_meta.get('title'),
         'description': html_meta.get('description'),
         'keywords': html_meta.get('keywords'),
@@ -49,7 +53,7 @@ for i in range(0, (entries.count() - 1)):
     meta = extract_metadata(entries[i])
     content = extract_content(entries[i])
 
-    meta_str = "\n".join([': '.join((k, str(meta[k]))) for k in meta])
+    meta_str = "\n".join([': '.join((k, meta[k])) for k in meta])
 
     filename = meta['slug'].replace('-', '_')+'.md'
     file_content = "----\n%s\n----\n\n%s" % (meta_str, content)

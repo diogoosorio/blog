@@ -14,6 +14,8 @@ SETTINGS = {
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
     'SERVER_NAME': 'diogoosorio.com',
+    'REPO_DIRECTORY': '/workspace/blog/content',
+    'PAGESIZE': 5,
     'INK_ASSET_MINIFY': True,
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',
@@ -25,12 +27,6 @@ CACHE_SETTINGS = {
     'CACHE_DEFAULT_TIMEOUT': 25,
     'CACHE_KEY_PREFIX': 'diogoo_blog_',
     'CACHE_DIR': '/tmp/diogoosorio.com/cache'
-}
-
-GITHUB_SETTINGS = {
-    'username': 'diogoosorio',
-    'password': '{+4=ahe[oYi\IJ!C//Ij/LZdN',
-    'repository': 'diogosorio/blog-entries'
 }
 
 if environment == 'development':

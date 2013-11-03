@@ -3,6 +3,7 @@ category: Work
 create_date: 2013-05-18
 description: Being the weird guy that I am, I've been thinking what would be the most important lessons I would tell myself, if I had the chance to go back on year and talk to myself.
 title: What I would like to tell to 'one-year-ago' me
+excerpt: Being the weird guy that I am, I've been thinking what would be the most important lessons I would tell myself, if I had the chance to go back on year and talk to myself. Professionally this past year meant a major leap forward, but it was also a pretty damn hard year - so here's the lessons I've retained working the past year at Sapo. An warning, this is a <a href="http://www.imdb.com/title/tt1517260/" target="_blank">The Host</a> styled entry, so if you're not really into some schizophrenicish, move along.
 keywords: programming, sapo, working, developer
 slug: what-i-would-tell-to-one-year-ago-me
 ----

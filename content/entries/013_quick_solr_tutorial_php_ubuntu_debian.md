@@ -3,6 +3,7 @@ category: PHP
 create_date: 2012-05-27
 description: This is a quick guide that aims to explain the necessary steps to get Solr up and running in 15 minutes. I'll be using Ubuntu throughout the entry.
 title: Quick Solr Tutorial - Up and Running in 15 Minutes (Ubuntu version)
+excerpt: Solr is the "official" search platform at SAPO. Being the new guy, I've been contacting with a lot of technology that I hadn't used before. This past week I pretty much have been toying around with Solr, not only as a "consumer" of information (that wouldn't be much of a challenge, would it?) but I've actually been sniffing around Solr's configuration and refactoring an application schema. Although I'm aware that I'm just scratching the surface on the subject, this entry hopes to provide a quick "bootstrap" to anyone who wishes to give Solr a try.
 keywords: solr, solr tutorial, solr ubuntu, solr debian, solr quick guide, solr guide, solr php
 slug: quick-solr-tutorial-php-ubuntu-debian
 ----

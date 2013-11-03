@@ -3,6 +3,7 @@ category: Linux
 create_date: 2012-02-18
 description: In this article, I'll give a brief explanation about what is SVN and how to create a private SVN repository, under Linux Mint / Ubuntu Oneric.
 title: Localhost SVN - setting up a svn repository
+excerpt: Code revision systems are crucial for any developer. I cannot count how many times SVN has rescued me for tedious hours of repairing something that either were poorly planned (and therefore ended up braking things), poorly implemented, or was an extra feature that I simply never did complete. In this article, I'll give a brief explanation about what is SVN and how to create a private SVN repository, under Linux Mint / Ubuntu Oneric.
 keywords: svn localhost, setting up a svn repository, creating svn local repository, svn repository, local svn
 slug: localhost-svn-setting-up-a-svn-repository
 ----

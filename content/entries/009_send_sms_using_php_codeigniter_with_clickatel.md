@@ -3,6 +3,7 @@ category: PHP
 create_date: 2012-02-29
 description: If you need to send SMS messages using PHP and CodeIgniter, look no further. I've developed a small library to communicate with Clickatel's API and made it publicly available.
 title: Send SMS Messages Using PHP and CodeIgniter
+excerpt: I had to develop a small library to interact with the Clickatel API. A couple of friends of mine immediately asked me to share the library with them and although the library itself doesn't do a lot, I thought it could be of used to anyone who wants to be able to quickly send an SMS message using CodeIgniter. I decided to make it publicly available, so if you need for your Web Application to send SMS messages, feel free to use it.
 keywords: send sms php, send sms codeigniter, clickatel api codeigniter, clickatel api php, send sms clickatel
 slug: send-sms-using-php-codeigniter-with-clickatel
 ----

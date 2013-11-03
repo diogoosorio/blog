@@ -9,4 +9,4 @@ pymongo==2.1.1
 
 Flask-Cache==0.12
 
-PyGithub==1.20.0
+misaka==1.0.2

@@ -3,6 +3,7 @@ category: Javascript
 create_date: 2012-01-02
 description: I've been introduced to the power of WebSockets, the Socket.IO library and Node.js. So I decided to create a small prototype to test it, here's what I did (full source-code included).
 title: Introducing Socket.IO and Node.js - how to write a small app.
+excerpt: <p>From time to time you find a website that introduces something truly different from everything you've seen. It happened to me a couple of months ago here - http://economico.sapo.pt/. It took me a while understanding what was happening behind the scenes: no AJAX requests were being made, how the heck were they updating the information on the website (and how did they do it so quickly). Then I found that the HTML5 standard had a neat feature called WebSockets - combine the feature with Node.js and you have a great foundation for developing awesome Web Apps.</p>   <p>I had to try it, so I developed a tiny prototype. Come check it out (full source code included).</p>
 keywords: websockets, socket.io, node.js, socket.io tutorial, node.js tutorial, server side javascript
 slug: nodejs-socket-io-awesomeness
 ----

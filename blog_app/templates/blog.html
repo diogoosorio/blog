@@ -3,7 +3,7 @@
 <section class="blogroll">
     <div class="column-group gutters vertical-space">
         <div class="large-100 medium-100 small-100">
-            {% for i in range(1, 5) %}
+            {% for entry in entries %}
                 {% include 'partials/blog/entry.html' %}
             {% endfor %}
         </div>

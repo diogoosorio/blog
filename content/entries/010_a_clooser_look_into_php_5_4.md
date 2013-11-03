@@ -3,6 +3,7 @@ category: PHP
 create_date: 2012-03-11
 description: PHP 5.4 version introduces a number of new feature and a couple of long needed corrections to the language. The use of Traits, a built-in web server, some array syntactic sugar are some of the new features.
 title: A clooser look into PHP 5.4
+excerpt: PHP 5.4 is (finally) out! The new version introduces a number of new feature and a couple of long needed corrections to the language. The "shiny new features" would definitely be the possibility to use Traits and a new built-in web server. But the news don't stop there - a new way to initialize arrays and array dereferencing (some syntactic sugar), binary number representation, callable was introduced as a valid typehint and a couple of more changes were introduced.
 keywords: php 5.4, php latest version, php 5.4 features, php 5.4 new features
 slug: a-clooser-look-into-php-5-4
 ----

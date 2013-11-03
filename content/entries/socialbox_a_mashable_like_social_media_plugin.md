@@ -3,6 +3,7 @@ category: Javascript
 create_date: 2011-12-19
 description: SocialBox allows you to quickly place a Social Media bar similar to Mashable's. It supports Facebook, Google +1, Twitter and StumbleUpon and can be easily customizable.
 title: SocialBox a "Mashable like" Social Media Plugin
+excerpt: SocialBox is a Javascript plugin that inserts a Social Bar "à la Mashable" on any website. Once created the bar will automatically position itself in relation to the screen - if the user scrolls up or down it will always remain visible. It currently supports Facebook "Like", Google "+1", StumbleUpon "Share" and Twitter "Share" and the bar itself can be easily customizable in order to feet nicely on your website.
 keywords: social media plugin, social media widget, social networking plugin, mashable social bar, mashable social media bar, mashable social media plugin
 slug: socialbox-a-mashable-like-social-media-plugin
 ----

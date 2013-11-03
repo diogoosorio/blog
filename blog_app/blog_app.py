@@ -4,8 +4,9 @@
 from flask import Flask, redirect, render_template, url_for, g
 from flask_ink.ink import Ink
 from flask.ext.cache import Cache
-from settings import SETTINGS, CACHE_SETTINGS, GITHUB_SETTINGS
-from repository import GithubRepository
+from settings import SETTINGS, CACHE_SETTINGS
+from repository import LocalRepository
+from parsers import MisakaWrapper
 
 app = Flask(__name__)
 app.config.update(SETTINGS)
@@ -23,7 +24,7 @@ def load_asset(filename):
 
 @app.before_request
 def before_request():
-    g.repository = GithubRepository(GITHUB_SETTINGS)
+    g.repository = LocalRepository(app.config['REPO_DIRECTORY'], MisakaWrapper())
 
 
 @app.route('/')
@@ -35,7 +36,9 @@ def index():
 @app.route('/blog/<int:page>/')
 @app.route('/blog/')
 def blog(page=1):
-    return str(page)
+    pageoff = (page - 1) * app.config['PAGESIZE']
+    entries = g.repository.getfiles('entries', app.config['PAGESIZE'], pageoff)
+    return render_template('blog.html', entries=entries, page=page)
 
 
 @app.route('/blog/rss/')

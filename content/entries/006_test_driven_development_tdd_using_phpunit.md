@@ -3,6 +3,7 @@ category: PHP
 create_date: 2012-01-24
 description: Test Driven Development (TDD) is a programming process in which you write tests, before touching any actual code. In this post I'll tell you a bit about Unit Testing using PHPUnit.
 title: Test Driven Development (TDD) using PHPUnit
+excerpt: It has happened way too many times. You develop your application, everything seems to be working smoothly - all the features that you wanted are in place and all the application's logic seems to be working perfectly. When you turn the application to the production server, "hell breaks loose". Something, somewhere is broken and you don't quite know what it is. Well Test Driven Development (TDD) is a programming process in which you write tests before creating any actual code in order to reduce problems like the one above. In this article I'll tell you a bit about Unit Testing using PHPUnit.
 keywords: phpunit, php tdd, test driven development php, tdd phpunit, test driven development phpunit
 slug: test-driven-development-tdd-using-phpunit
 ----

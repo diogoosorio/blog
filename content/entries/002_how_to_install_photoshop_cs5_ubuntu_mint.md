@@ -3,6 +3,7 @@ category: Linux
 create_date: 2011-12-14
 description: This is a quick guide with instructions to install Adobe Photoshop CS5 on Ubuntu 11.10 (Oneric Oncelot) or Linux Mint 12 (Lisa).
 title: How to Install Photoshop CS5 on Ubuntu 11.10 (Oneric Ocelot) and Mint 12 (Lisa)
+excerpt: Today I had a very hard time getting Adobe Photoshop CS5 to run under Linux Mint 12 ("Lisa"). So I decided to post here the procedure that I had to follow in order to install the application. This guide should also work for Ubuntu 11.10 (Oneric Ocelot).
 keywords: photoshop cs5 ubuntu, install photoshop cs5 ubuntu, photoshop cs5 linux mint, install photoshop cs5 linux mint, install photoshop cs5 ubuntu 11
 slug: how-to-install-photoshop-cs5-ubuntu-mint
 ----

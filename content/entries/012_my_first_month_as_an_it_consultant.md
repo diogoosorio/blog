@@ -3,6 +3,7 @@ category: Work
 create_date: 2012-04-14
 description: This is the narrative of my first month working as an IT Consultant / Web Developer at a big outsourcing company - AGAP2.
 title: My First Month as an IT Consultant
+excerpt: A month ago I've written about how <a href="http://diogoosorio.com/blog/entry/my-first-big-job-interview" target="_blank">my first big interview</a> had been an huge success. Well I got the job and since the 15th of last month I'm working for <a href="http://www.agap2.com/" target="_blank">AGAP2</a> as a PHP Web Developer. <a href="http://www.agap2.com/" target="_blank">AGAP2</a> is a Portuguese IT company whose main business area is outsourcing. For someone without any previous experience in working in this regime, I was kind of thrown to the "wolf's layer" (aka the client's office) the day after I signed my contract. This is the narrative of my first month as an IT consultant. 
 keywords: it consutant, outsource it consultant, agap2, web developer, php web developer
 slug: my-first-month-as-an-it-consultant
 ----

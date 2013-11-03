@@ -3,6 +3,7 @@ category: Freelancer
 create_date: 2011-12-07
 description: A much needed revamp on my portfolio was made. During the process I decided to give MongoDB a try. Here are my thoughts about it.
 title: Hello World - Revamped portfolio w\ MongoDB
+excerpt: I've finally had the time to "revamp" my old portfolio/blog website. As this was a personal project I've decided to try out some new things - namely MongoDB. MongoDB is a document oriented, non-relational database. It's a big shift from the traditional RDBMS I'm used to, but so far, so good...
 keywords: new portfolio, revamp portfolio, mongodb portfolio
 slug: hello-world-new-portfolio-with-mongodb
 ----

@@ -3,6 +3,7 @@ category: Freelancer
 create_date: 2012-03-16
 description: This is narrative of my first day of job hunting, how I got two interviews in 50 minutes (literally) and my first interview... ever. 
 title: My First Big Job Interview
+excerpt: Yesterday I started to look for a new professional challenge. I guess the long hours working alone and the fact that I've spent the last couple of months taking on projects that were not very challenging took made me rethink if I was doing what I wanted to do with my life. After a bit of preparation yesterday I've finally sent my first replies to job offers. This is the report of my first day of job hunting and its direct result - my first job interview.
 keywords: interview, job hunting, employer, technical interview, behavioural interview
 slug: my-first-big-job-interview
 ----
