@@ -38,6 +38,3 @@ nosetests.xml
 
 # Rope
 .ropeproject
-
-# Config
-tree/settings.py

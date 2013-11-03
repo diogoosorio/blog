@@ -27,6 +27,11 @@ CACHE_SETTINGS = {
     'CACHE_DIR': '/tmp/diogoosorio.com/cache'
 }
 
+GITHUB_SETTINGS = {
+    'username': 'diogoosorio',
+    'password': '{+4=ahe[oYi\IJ!C//Ij/LZdN'
+}
+
 if environment == 'development':
     SETTINGS['DEBUG'] = True
     SETTINGS['TESTING'] = True
