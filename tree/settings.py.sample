@@ -6,8 +6,7 @@ import os
 environment = os.environ.get('ENVIRONMENT')
 environemnt = environment.lower() if environment is not None else 'production'
 
-Settings = dict()
-Settings = {
+SETTINGS = {
     'DEBUG': False,
     'TESTING': False,
     'SECRET_KEY': 'sample-secret-key',
@@ -19,6 +18,9 @@ Settings = {
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',
     'ENVIRONMENT': environment,
+}
+
+CACHE_SETTINGS = {
     'CACHE_TYPE': 'simple',
     'CACHE_DEFAULT_TIMEOUT': 25,
     'CACHE_KEY_PREFIX': 'diogoo_blog_',
@@ -26,10 +28,11 @@ Settings = {
 }
 
 if environment == 'development':
-    Settings['DEBUG'] = True
-    Settings['TESTING'] = True
-    Settings['SESSION_COOKIE_DOMAIN'] = None,
-    Settings['SERVER_NAME'] = None
-    Settings['HOST'] = '0.0.0.0'
-    Settings['INK_ASSET_MINIFY'] = False
-    Settings['CACHE_TYPE'] = 'null'
+    SETTINGS['DEBUG'] = True
+    SETTINGS['TESTING'] = True
+    SETTINGS['SESSION_COOKIE_DOMAIN'] = None,
+    SETTINGS['SERVER_NAME'] = None
+    SETTINGS['HOST'] = '0.0.0.0'
+    SETTINGS['INK_ASSET_MINIFY'] = False
+
+    CACHE_SETTINGS['CACHE_TYPE'] = 'null'

@@ -4,11 +4,12 @@
 from flask import Flask, redirect, render_template, url_for
 from flask_ink.ink import Ink
 from flask.ext.cache import Cache
-from settings import Settings
+from settings import SETTINGS, CACHE_SETTINGS
 
 app = Flask(__name__)
-app.config.update(Settings)
+app.config.update(SETTINGS)
 
+cache = Cache(app, CACHE_SETTINGS)
 
 def load_asset(filename):
     environment = app.config['ENVIRONMENT']
@@ -37,7 +38,6 @@ def blog_detail(post_name):
 
 if __name__ == '__main__':
     Ink(app)
-    Cache(app)
 
     app.jinja_env.globals.update(load_asset=load_asset)
     app.run(host=Settings['HOST'])
