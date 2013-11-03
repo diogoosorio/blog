@@ -3,7 +3,6 @@ category: PHP
 create_date: 2012-05-27
 description: This is a quick guide that aims to explain the necessary steps to get Solr up and running in 15 minutes. I'll be using Ubuntu throughout the entry.
 title: Quick Solr Tutorial - Up and Running in 15 Minutes (Ubuntu version)
-excerpt: Solr is the "official" search platform at SAPO. Being the new guy, I've been contacting with a lot of technology that I hadn't used before. This past week I pretty much have been toying around with Solr, not only as a "consumer" of information (that wouldn't be much of a challenge, would it?) but I've actually been sniffing around Solr's configuration and refactoring an application schema. Although I'm aware that I'm just scratching the surface on the subject, this entry hopes to provide a quick "bootstrap" to anyone who wishes to give Solr a try.
 keywords: solr, solr tutorial, solr ubuntu, solr debian, solr quick guide, solr guide, solr php
 slug: quick-solr-tutorial-php-ubuntu-debian
 ----
@@ -26,8 +25,6 @@ For a more info, consider giving a look at ["Why use
 Solr?"](http://wiki.apache.org/solr/WhyUseSolr) and at [Solr's
 features](lucene.apache.org/solr/).
 
-&nbsp_place_holder;
-
 ### Step 1 - Installing Solr
 
 So first things first, lets get Solr up and running in our machine. I'm using
@@ -43,8 +40,6 @@ things).
 At this point you should be able to point your browser to
 [http://localhost:8080/solr/](http://localhost:8080) and actually see
 something.
-
-&nbsp_place_holder;
 
 ### Step 2 - How to Play With Solr
 
@@ -70,8 +65,6 @@ possibility for our visitors to preform a "search" for any term on our
 website. Every recipe would be a "document" with the following fields -
 **Title**, **Ingr****edients**, **Prepara****tion Time **(in minutes) and
 ******Instructions** (the recipe itself).
-
-&nbsp_place_holder;
 
 ### Step 3 - Building the Schema.xml
 
@@ -176,8 +169,6 @@ explanation:
   5. **multiValued:** will the field accept multiple entries (ex. the ingredients field)
   6. **required**: is the field required?
 
-&nbsp_place_holder;
-
 ### Step 3 - Inserting a Document
 
 After storing your **schema.xml** and restarting **Jetty**, you should be
@@ -227,11 +218,7 @@ olr/admin/stats.jsp](http://localhost:8080/solr/admin/stats.jsp)
 
 You should see that the **numDocs **value is **1**:
 
-![](../../public/images/blog/blog/solr1.jpg)
-
-&nbsp_place_holder;
-
-&nbsp_place_holder;
+![](/static/images/blog/blog/solr1.jpg)
 
 ### Step 4 - Querying Solr
 
@@ -288,6 +275,4 @@ response from Solr would look something like this:
         </result>
     </response>
     
-
-&nbsp_place_holder;
 

@@ -3,7 +3,6 @@ category: Linux
 create_date: 2011-12-14
 description: This is a quick guide with instructions to install Adobe Photoshop CS5 on Ubuntu 11.10 (Oneric Oncelot) or Linux Mint 12 (Lisa).
 title: How to Install Photoshop CS5 on Ubuntu 11.10 (Oneric Ocelot) and Mint 12 (Lisa)
-excerpt: Today I had a very hard time getting Adobe Photoshop CS5 to run under Linux Mint 12 ("Lisa"). So I decided to post here the procedure that I had to follow in order to install the application. This guide should also work for Ubuntu 11.10 (Oneric Ocelot).
 keywords: photoshop cs5 ubuntu, install photoshop cs5 ubuntu, photoshop cs5 linux mint, install photoshop cs5 linux mint, install photoshop cs5 ubuntu 11
 slug: how-to-install-photoshop-cs5-ubuntu-mint
 ----
@@ -37,8 +36,6 @@ Turns out that [Wine](http://www.winehq.org/) has a [great support
 application. But under Ubuntu Oneric and Linux Mint 12 the installer doesn't
 work - but there's a quick and simple turnaround.
 
-&nbsp_place_holder;
-
 ## Installing Wine on Ubuntu 11 / Linux Mint 12
 
 So the first thing you have to do is to install wine and winetricks. You may
@@ -49,8 +46,6 @@ use _apt-get_ to do so:
     sudo apt-get update
     sudo apt-get install wine1.3 winetricks
 
-&nbsp_place_holder;
-
 ## Configuring Wine
 
 You'll need to use winetricks in order to install some dependencies, before
@@ -59,7 +54,7 @@ you start installing **Photoshop** itself.
     
     winetricks gdiplus ie6 msxml3 vcrun2005sp1 vcrun2008
 
-## &nbsp_place_holder;
+##
 
 ## Getting Adobe Photoshop CS5 Files
 
@@ -81,9 +76,7 @@ Now you'll need to copy some files from the Windows computer to the main OS:
 **C:\Users****\your_use****r\AppData\Roaming\Adobe**,
 **C:\Windows\System32\odbc32.dll** and **C:\Windows\System32\odbcint.dll**
 
-![](../../public/images/blog/registry.jpg)
-
-&nbsp_place_holder;
+![](/static/images/blog/registry.jpg)
 
 The copied folders should be placed on the following locations:
 
@@ -110,9 +103,7 @@ native. To do so run:
 Choose the **Libraries**, type _odbc32_ in the **New override for library**
 box and hit **Add**. Do the same for _odbcint__._
 
-![](../../public/images/blog/winecfg.png)
-
-&nbsp_place_holder;
+![](/static/images/blog/winecfg.png)
 
 ## Launch Photoshop CS5
 
@@ -120,8 +111,6 @@ Finally to launch Photoshop CS5, issue the command:
 
     
     wine "~/.wine/drive_c/Program Files/Adobe/Adobe Photoshop CS5/Photoshop.exe"
-
-&nbsp_place_holder;
 
 ## Bonus - Error when selecting the Type Tool
 
@@ -131,8 +120,6 @@ copy it to _~/.wine/drive_c/windows/system32/_.
 
 After that override that dll as native on the _winecfg_ tool, just like you
 did above with the _odbc32 _and _odbcint_ dll's.
-
-&nbsp_place_holder;
 
 ## Wrapping Up
 
@@ -144,5 +131,5 @@ all (so far).
 The printscreen bellow is from my actual Desktop, **Linux Mint 12** running
 **Photoshop CS5 **while writting this post**.**
 
-![](../../public/images/blog/photoshop_cs5_linux_mint.jpg)
+![](/static/images/blog/photoshop_cs5_linux_mint.jpg)
 

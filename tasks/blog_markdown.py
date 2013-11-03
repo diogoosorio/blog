@@ -33,8 +33,12 @@ def extract_metadata(item):
     return meta
 
 def extract_content(item):
+    content = item.get('text')
+    content = content.replace('&nbsp;', ' ')
+    content = content.replace('../../public/images/blog/', '/static/images/blog/')
+
     h = html2text.HTML2Text()
-    return h.handle(item.get('text'))
+    return h.handle(content)
 
 def create_blogentry(filename, contents):
     absolute_filepath = os.path.join(ENTRIES_DIR, filename)
@@ -55,17 +59,6 @@ for i in range(0, (entries.count() - 1)):
 
     meta_str = "\n".join([': '.join((k, meta[k])) for k in meta])
 
-    filename = meta['slug'].replace('-', '_')+'.md'
+    filename = meta['slug']+'.md'
     file_content = "----\n%s\n----\n\n%s" % (meta_str, content)
     create_blogentry(filename, file_content)
-
-    file_list[meta['create_date']] = filename
-
-# Another passage to sort/rename tne entries
-i = 1
-for key in sorted(file_list.iterkeys()):
-    filename = file_list[key]
-    prefix = str(i).zfill(3)
-    new_filename = prefix + "_" + filename
-    rename_blogentry(filename, new_filename)
-    i += 1

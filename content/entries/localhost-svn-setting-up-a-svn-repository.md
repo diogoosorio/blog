@@ -3,7 +3,6 @@ category: Linux
 create_date: 2012-02-18
 description: In this article, I'll give a brief explanation about what is SVN and how to create a private SVN repository, under Linux Mint / Ubuntu Oneric.
 title: Localhost SVN - setting up a svn repository
-excerpt: Code revision systems are crucial for any developer. I cannot count how many times SVN has rescued me for tedious hours of repairing something that either were poorly planned (and therefore ended up braking things), poorly implemented, or was an extra feature that I simply never did complete. In this article, I'll give a brief explanation about what is SVN and how to create a private SVN repository, under Linux Mint / Ubuntu Oneric.
 keywords: svn localhost, setting up a svn repository, creating svn local repository, svn repository, local svn
 slug: localhost-svn-setting-up-a-svn-repository
 ----
@@ -27,10 +26,7 @@ Although the SVN commands are transversal to all operating systems, I'm
 running Linux Mint so the installation part of the article should be adapted
 to the the Linux flavour of your choice (except for Ubuntu, if you're running
 Ubuntu Oneric, this whole article should also apply). If you happen to have an
-Windows system,
-check&nbsp_place_holder;[TortoiseSVN](http://tortoisesvn.net/).
-
-&nbsp_place_holder;
+Windows system, check [TortoiseSVN](http://tortoisesvn.net/).
 
 ## What is SVN and what's it for?
 
@@ -55,8 +51,8 @@ sure about, a new UI for a certain area of your application, ...) you can
 simply create a completely different branch where you'll try to implement
 whatever you want, without affecting the "main" code. Further down the line,
 you may decide to integrate this new feature with the "main" branch (therefore
-you&nbsp_place_holder;_merge_ the two branches) or simply drop whatever you're
-trying to achieve.
+you _merge_ the two branches) or simply drop whatever you're trying to
+achieve.
 
 ![](../../public/images/svn2.jpg)
 
@@ -70,27 +66,23 @@ disrupt the development on the main trunk.
 So at that time you create a branch. Meanwhile you release version 2.0. After
 a couple of months, you finally are able to implement the "**Shiny new
 feature**" and therefore decide it should become a part of your main trunk. So
-you&nbsp_place_holder;**Merge** the the branch with the main trunk.
-
-&nbsp_place_holder;
+you **Merge** the the branch with the main trunk.
 
 ## Hands-on - how to install subversion, create a repository and start working
 with it?
 
 Let's move on to how you create a repository and how to use it. Under Ubuntu
-Oneric / Mint Lisa, you can use&nbsp_place_holder;_aptitude_
-or&nbsp_place_holder;_apt_ to install subversion:
+Oneric / Mint Lisa, you can use _aptitude_ or _apt_ to install subversion:
 
     
     sudo aptitude install subversion
 
 And as simple as that you're on your way. The second step would be to create a
 repository. Now a common practice is to have all the repositories under one
-folder on your file system. In my case, I'll host my repositories
-under&nbsp_place_holder;**/home/diogo/svnrep/**.
+folder on your file system. In my case, I'll host my repositories under
+**/home/diogo/svnrep/**.
 
-So my repository will be placed
-under&nbsp_place_holder;**/home/diogo/svnrep/myapp/**:
+So my repository will be placed under **/home/diogo/svnrep/myapp/**:
 
     
     mkdir ~/svnrep
@@ -99,24 +91,23 @@ under&nbsp_place_holder;**/home/diogo/svnrep/myapp/**:
 
 And you now have a working, fully operational repository. The third step is to
 impor your project's current files so that they start getting revised. For
-demonstration purposes, let's imagine that my project is located
-under&nbsp_place_holder;**/home/diogo/projects/myapp**:
+demonstration purposes, let's imagine that my project is located under
+**/home/diogo/projects/myapp**:
 
     
     svn import /home/diogo/projects/myapp file:///home/diogo/svnrep/myapp/trunk -m "Initial import."
 
 So now my repository now has a initial version of all my files. But the
 project folder itself isn't associated with my repository, so you won't be
-able to _commit_&nbsp_place_holder;new revisions quite yet. First you need to
-checkout a working version of your repository:
+able to _commit_ new revisions quite yet. First you need to checkout a working
+version of your repository:
 
     
     svn co file:///home/diogo/svnrep/myapp/trunk /home/diogo/projects/myapp_work
 
 We now have an actual working copy of the repository. Future work on the main
-trunk should be done there. Everytime you make a change in a file that's
-under&nbsp_place_holder;**/home/diogo/projects/myapp_work**, you can simply
-issue the command:
+trunk should be done there. Everytime you make a change in a file that's under
+**/home/diogo/projects/myapp_work**, you can simply issue the command:
 
     
     cd /home/diogo/projects/myapp_work
@@ -126,32 +117,27 @@ And that's it. For a broader explanation of SVN features and good practices,
 visit the [project's documentation](http://subversion.apache.org/docs
 /community-guide/).
 
-&nbsp_place_holder;
-
 ## SVN Mini Quick Reference
 
-  * _add -&nbsp_place_holder;_Add a new file to the repository (ex. _svn add mynewfile.php_)  
-&nbsp_place_holder;
+  * _add - _Add a new file to the repository (ex. _svn add mynewfile.php_)  
 
   * _branch_ - Usually refers to a fork (a copy) of the main trunk, whose purpose is to be subjected to some modifications, without interfering with the roadmap of the main trunk  
   
 
-  * _checkout_&nbsp_place_holder;_-&nbsp_place_holder;_Creates an working copy of a repository  
-&nbsp_place_holder;
+  * _checkout_ _- _Creates an working copy of a repository  
 
-  * _commit&nbsp_place_holder;_- Create a new repository version, by submitting the changes you've made to the working copy.  
+  * _commit _- Create a new repository version, by submitting the changes you've made to the working copy.  
   
 
-  * _delete -&nbsp_place_holder;_To remove a file from the repository from that point on (it will still be present on the versions prior to the delete command).  
-&nbsp_place_holder;
+  * _delete - _To remove a file from the repository from that point on (it will still be present on the versions prior to the delete command).  
 
   * _diff_ - Shows the differences between two revisions on a given file.  
   
 
-  * _log_ - Show the revision history of &nbsp_place_holder;a given file or folder  
+  * _log_ - Show the revision history of a given file or folder  
   
 
-  * _merge&nbsp_place_holder;_- The proccess through which changes from the repository (ex. branch) are included on the main trunk.  
+  * _merge _- The proccess through which changes from the repository (ex. branch) are included on the main trunk.  
   
 
   * _repository_ - A central "folder" where all the versions are stored and the changes are tracked.  
@@ -163,5 +149,5 @@ visit the [project's documentation](http://subversion.apache.org/docs
   * _update_ - Update your working copy with the most recent version of the files stored on the repository.  
   
 
-  * _working copy_ - The place where you actually should make the changes. The files under the working copy should be subject to revision.&nbsp_place_holder;
+  * _working copy_ - The place where you actually should make the changes. The files under the working copy should be subject to revision. 
 

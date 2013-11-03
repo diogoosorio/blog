@@ -3,7 +3,6 @@ category: Javascript
 create_date: 2011-12-19
 description: SocialBox allows you to quickly place a Social Media bar similar to Mashable's. It supports Facebook, Google +1, Twitter and StumbleUpon and can be easily customizable.
 title: SocialBox a "Mashable like" Social Media Plugin
-excerpt: SocialBox is a Javascript plugin that inserts a Social Bar "à la Mashable" on any website. Once created the bar will automatically position itself in relation to the screen - if the user scrolls up or down it will always remain visible. It currently supports Facebook "Like", Google "+1", StumbleUpon "Share" and Twitter "Share" and the bar itself can be easily customizable in order to feet nicely on your website.
 keywords: social media plugin, social media widget, social networking plugin, mashable social bar, mashable social media bar, mashable social media plugin
 slug: socialbox-a-mashable-like-social-media-plugin
 ----
@@ -22,16 +21,10 @@ Media realm.
 One of the things that captured my attention on Mashable was the use of a neat
 **Social Media Box**:
 
-&nbsp_place_holder;
-
-![Mashable Social Media Bar](../../public/images/blog/mashable-social.jpg)
-
-&nbsp_place_holder;
+![Mashable Social Media Bar](/static/images/blog/mashable-social.jpg)
 
 So I decided to create a **social media plugin** that I (and anyone else for
 that matter) could use.
-
-&nbsp_place_holder;
 
 ## Presenting SocialBox
 
@@ -40,8 +33,6 @@ that matter) could use.
 It currently supports **Facebook Like**, **Google +1**, ******StumbleUpon
 Share** and **Twitter**** Share**. Hopefully you can see it working on this
 page (to the left).
-
-&nbsp_place_holder;
 
 ## Installing SocialBox
 
@@ -70,8 +61,6 @@ share the current page.
 For a more advanced setup there are a couple of things that you can adjust,
 namelly the plugin's presentation and the element to which it should be
 appended. Here's a more complete example:
-
-&nbsp_place_holder;
 
     
     <html>
@@ -105,8 +94,6 @@ Still pretty accessible. There are a couple of features that I want to add,
 but for now this will suffice. As I mentioned before the code is released
 under no license at all, so do whatever you like with it. If you can post a
 backlink here, I'd appreciate it.
-
-&nbsp_place_holder;
 
 ## Download SocialBox
 

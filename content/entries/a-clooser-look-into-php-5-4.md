@@ -3,18 +3,15 @@ category: PHP
 create_date: 2012-03-11
 description: PHP 5.4 version introduces a number of new feature and a couple of long needed corrections to the language. The use of Traits, a built-in web server, some array syntactic sugar are some of the new features.
 title: A clooser look into PHP 5.4
-excerpt: PHP 5.4 is (finally) out! The new version introduces a number of new feature and a couple of long needed corrections to the language. The "shiny new features" would definitely be the possibility to use Traits and a new built-in web server. But the news don't stop there - a new way to initialize arrays and array dereferencing (some syntactic sugar), binary number representation, callable was introduced as a valid typehint and a couple of more changes were introduced.
 keywords: php 5.4, php latest version, php 5.4 features, php 5.4 new features
 slug: a-clooser-look-into-php-5-4
 ----
 
-While **PHP6**&nbsp_place_holder;still lies ahead in a far distant
-future,&nbsp_place_holder;**PHP** **5.4** just got released and it brings a
-cool set of new features to "play with". The major ones are definetly the
-inclusion of Traits on the language and the built-in web server - but they are
-no the only ones. Check out the new features.
-
-&nbsp_place_holder;
+While **PHP6** still lies ahead in a far distant future, **PHP** **5.4** just
+got released and it brings a cool set of new features to "play with". The
+major ones are definetly the inclusion of Traits on the language and the
+built-in web server - but they are no the only ones. Check out the new
+features.
 
 ### Traits
 
@@ -52,8 +49,6 @@ Here's a quick example:
     $o->sayWorld();
     $o->sayExclamationMark();
 
-&nbsp_place_holder;
-
 ### Built-in Web Server
 
 Tired of creating a vhost each time you want to start a new project? Well
@@ -67,27 +62,19 @@ Will be enough to get your server up and running. Check out the [docs
 page](http://php.net/manual/en/features.commandline.webserver.php) for more
 information.
 
-&nbsp_place_holder;
-
 ### New Array Syntatic Sugar
 
 While one of the simplest new features this is definitly one of my favourites.
 Remember how you had to use "temporary" variables whenever you wanted to work
 with arrays?
 
-&nbsp_place_holder;
-
     
     <?php
     $name 	= explode(' ', 'Diogo Osorio');
     $fname	= $name[0];
 
-&nbsp_place_holder;
-
 Never again! This was one of those things I trully envied Java for - in PHP
 5.4 the code bellow is also valid:
-
-&nbsp_place_holder;
 
     
     <?php
@@ -98,11 +85,7 @@ Never again! This was one of those things I trully envied Java for - in PHP
     	return array('Diogo', 'Osorio');
     }
 
-&nbsp_place_holder;
-
 A new way of initializing arrays was also introduced:
-
-&nbsp_place_holder;
 
     
     <?php
@@ -117,8 +100,6 @@ A new way of initializing arrays was also introduced:
 Not much to add here. The shorthand for the echo function is now enabled "out
 of the box".
 
-&nbsp_place_holder;
-
 ### Binary Number Representation
 
 You can now represent binary numbers in PHP:
@@ -131,15 +112,12 @@ You can now represent binary numbers in PHP:
     $seven		= 0b111;
     $five			= 0b101;
 
-&nbsp_place_holder;
-
 ### Callable TypeHint
 
 While PHP is a loosly typed language, typehints were introduced to enable a
 more "strongly typed" programming style. Until now only Objects and Arrays
-could be typehints. With PHP 5.4
-[callable](https://wiki.php.net/rfc/callable)&nbsp_place_holder;is introduced
-as a valida typehint, therefore the code bellow will be valid:
+could be typehints. With PHP 5.4 [callable](https://wiki.php.net/rfc/callable)
+is introduced as a valida typehint, therefore the code bellow will be valid:
 
     
     <?php
@@ -154,15 +132,11 @@ as a valida typehint, therefore the code bellow will be valid:
     echo my_function('my_name');
     echo my_function(function(){ return 'Diogo Osorio'; });
 
-&nbsp_place_holder;
-
 ### High Precision Timer
 
-_$_SERVER['REQUEST_TIME_FLOAT']&nbsp_place_holder;_was introduced and it will
-containt the timestamp with microsecond precision of the time that the request
-was started (usefull for benchmarking and whatnot).
-
-&nbsp_place_holder;
+_$_SERVER['REQUEST_TIME_FLOAT'] _was introduced and it will containt the
+timestamp with microsecond precision of the time that the request was started
+(usefull for benchmarking and whatnot).
 
 ### UTF-8 as Default Charset
 
@@ -170,12 +144,9 @@ This was a no brainer. ISO-8859-1 was dropped as the default charset and UTF-8
 took its place. This means that the "mandatory" meta tag to inform the browser
 of the page encoding is no longer necessary.
 
-&nbsp_place_holder;
-
 ### $this in Anonymous Functions
 
-The&nbsp_place_holder;_$this_ scope was altered in PHP 5.4. Now the code
-bellow is valid:
+The _$this_ scope was altered in PHP 5.4. Now the code bellow is valid:
 
     
     class Foo
@@ -201,8 +172,6 @@ bellow is valid:
         }
     }
     new Bar(new Foo);
-
-&nbsp_place_holder;
 
 ### That's it
 

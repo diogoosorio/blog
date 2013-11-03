@@ -3,7 +3,6 @@ category: Linux
 create_date: 2011-12-19
 description: In this entry I'll install and configure a LNMP (Linux + Nginx + MongoDB + PHP) stack on Debian Lenny.
 title: Installing Nginx + MongoDB + PHP FPM on Debian Lenny (6.0)
-excerpt: For anyone interested in developing for the web it's critical to be able to configure a machine to serve as a development environment for any project. On this entry I'll install a machine running Debian "Squeeze" (6.0) with a LNMP stack (LNMP meaning - Linux + Nginx + MongoDB + PHP). Although the configuration would need to be (heavily) tweaked on for a production environment, this will show how to quickly get things running.
 keywords: install lnmp, install nginx debian, install mongo debian, install mongodb debian
 slug: installing-nginx-mongodb-php-on-debian-lenny-6
 ----
@@ -15,8 +14,6 @@ was to quickly configure a development environment for myself.
 
 So I'll try to explain how to install a **LNMP Stack** (Linux + Nginx +
 MongoDB + PHP FPM) under **Debian "Lenny" (6.0)**.
-
-&nbsp_place_holder;
 
 ## Step 1 - Installing nginx
 
@@ -35,10 +32,6 @@ issue the following command to install Nginx:
 
     
     aptitude install nginx
-
-&nbsp_place_holder;
-
-&nbsp_place_holder;
 
 ## Step 2 - Installing PHP-FPM
 
@@ -66,18 +59,12 @@ extension:
     pecl install mongo
     echo "extension=mongo.so" >> /etc/php5/fpm/php.ini
 
-&nbsp_place_holder;
-
 ## Step 3 - Install MongoDB
 
 Installing MongoDB is also pretty straightforward:
 
     
     install mongodb mongodb-server
-
-&nbsp_place_holder;
-
-&nbsp_place_holder;
 
 ## Step 4 - Configure Nginx
 
@@ -117,10 +104,6 @@ file:
     	}
     }
     
-
-&nbsp_place_holder;
-
-&nbsp_place_holder;
 
 ## Step 5 - Wrapping up
 

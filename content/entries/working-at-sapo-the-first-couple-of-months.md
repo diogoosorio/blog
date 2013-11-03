@@ -3,7 +3,6 @@ category: Work
 create_date: 2012-07-15
 description: For the last couple of months I've been working at SAPO. These are my first impressions of the company and projects I've been envolved in.
 title: Working at Sapo - The first couple of months
-excerpt: For the last couple of months I've been working at SAPO. For those who the name doesn't ring a bell, SAPO is pretty much the biggest "web centered" Portuguese company - it's owned by Portugal Telecom and if you look it up on Alexa you'll probably find SAPO's homepage figuring on the top 5 most visited websites of Portugal (right after Facebook, Google and Youtube).  <p>I've been integrated on the SAPO channels team. We basically develop and mantain all those "satellite" websites that are owned by SAPO - from recipes, to gossip, sports, ... you pick a topic and it's very likelly that SAPO owns an website dedicated to the matter.</p>  <p>These are my first impressions of the company and projects I've been envolved in.</p>
 keywords: sapo, working at sapo
 slug: working-at-sapo-the-first-couple-of-months
 ----
@@ -57,8 +56,6 @@ skeleton of a model class for every table (round 2 will be to automatically be
 able to generate the relations among the Models just by taking a look at the
 constrains that are in place on the database).
 
-&nbsp_place_holder;
-
 #### But enough about me, so how's it like to work at SAPO?
 
 Well for the first week or so, I must confess its a bit intimidating. I mean,
@@ -104,8 +101,6 @@ any [Codebits](https://codebits.eu/), I can attest that the environment
 produced there is pretty much a reflection of what SAPO is - a bunch of people
 interested in hacking their way through whatever problem its thrown in their
 way.
-
-&nbsp_place_holder;
 
 #### So what now?
 

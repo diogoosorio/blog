@@ -3,7 +3,6 @@ category: PHP
 create_date: 2012-02-16
 description: The singleton design pattern aims to guarantee an exclusive access to a given resource throughout your application. Understand how to apply the singleton design pattern and what's its use.
 title: Understanding the Singleton Design Pattern with PHP
-excerpt: The singleton pattern is a very widespread design pattern. It aims to guarantee an exclusive access to a given resource throughout your application - in other words it makes sure that you are only able to instantiate a certain class one and one time only. I'll apply the concept to a class that establishes a connection to a database.
 keywords: singleton pattern, singleton php, understand singleton pattern, implementing the singleton design pattern with php
 slug: understanding-the-singleton-design-pattern-with-php
 ----

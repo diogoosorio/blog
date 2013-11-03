@@ -3,7 +3,6 @@ category: Javascript
 create_date: 2012-01-02
 description: I've been introduced to the power of WebSockets, the Socket.IO library and Node.js. So I decided to create a small prototype to test it, here's what I did (full source-code included).
 title: Introducing Socket.IO and Node.js - how to write a small app.
-excerpt: <p>From time to time you find a website that introduces something truly different from everything you've seen. It happened to me a couple of months ago here - http://economico.sapo.pt/. It took me a while understanding what was happening behind the scenes: no AJAX requests were being made, how the heck were they updating the information on the website (and how did they do it so quickly). Then I found that the HTML5 standard had a neat feature called WebSockets - combine the feature with Node.js and you have a great foundation for developing awesome Web Apps.</p>   <p>I had to try it, so I developed a tiny prototype. Come check it out (full source code included).</p>
 keywords: websockets, socket.io, node.js, socket.io tutorial, node.js tutorial, server side javascript
 slug: nodejs-socket-io-awesomeness
 ----
@@ -20,8 +19,6 @@ browsing a Portuguese news website -
 using a so called "Real Time" technology developed by yet another Portuguese
 company [IBT](http://www.ibt.co/) (yeah I know, despite what you might be
 seeing on the news, we the Portuguese people rock).
-
-&nbsp_place_holder;
 
 ## How the heck are they doing that?
 
@@ -47,8 +44,6 @@ compability issues.
 A bit more on Google and I found this absolutelly awesome library called
 [Socket.IO](http://socket.io/). I'm set, lets do this.
 
-&nbsp_place_holder;
-
 ## Lets build a prototype!
 
 So a couple of months ago I had a chat with a fellow colleague Web Designer -
@@ -70,8 +65,6 @@ To present the info on a graphical manner, I decided to ask for permission to
 track the user location (using yet another HTML5 feature - [Geo
 Location](http://dev.w3.org/geo/api/spec-source.html). Then pin down the users
 on a map as they landed on the page.
-
-&nbsp_place_holder;
 
 ## Server side
 
@@ -530,8 +523,6 @@ On the client side I created a small library to work with the server:
 It basically handles the connect information and upon receival of a client
 update request, pin points him on a Google Maps.
 
-&nbsp_place_holder;
-
 ## The final result
 
 I had a lot of fun writting this. I even disregarded my girlfriend for an
@@ -543,7 +534,7 @@ wrong), leave a comment - I'm aware that I'm not a Javascript guru of any
 kind. If you liked the end result, please leave a
 **Like**/**G+********/****Retweet**. :)
 
-Oh and you can download the entire thing here:&nbsp_place_holder;[http://diogo
-osorio.com/public/downloads/rtcserver/rtcserver.zip](../../public/downloads/rt
-cserver/rtcserver.zip)
+Oh and you can download the entire thing here: [http://diogoosorio.com/public/
+downloads/rtcserver/rtcserver.zip](../../public/downloads/rtcserver/rtcserver.
+zip)
 

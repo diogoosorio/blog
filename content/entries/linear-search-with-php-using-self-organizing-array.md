@@ -3,7 +3,6 @@ category: PHP
 create_date: 2011-12-20
 description: In this entry I'll show how a linear search on an array can be efficient, given that we're repeatidly trying to find the same set of values.
 title: Efficient linear search w\ PHP on a sorted array
-excerpt: Although the term "linear search" is often ostracized by any programmer, the truth of the matter is that in some occasions it's an algorithm worth looking at when we're trying to find something. Given the right circumstances a linear search can be preformed quite fast and be a viable solution to find something on a list. One example would be finding one value (or a set of values) recurrently on that list by rearranging the lists values so that the most commonly searched values are pushed to the top.
 keywords: linear search php, linear search, find php array, linear search array, linear search php array
 slug: linear-search-with-php-using-self-organizing-array
 ----
@@ -13,10 +12,10 @@ efficient way of finding a value on a sorted list.
 
 One of such occasions would be when you are trying to find a value (or a set
 of values) repeatedly. If you know that only a small subset of your list is
-frequently searched for, a solution would&nbsp_place_holder; be to make sure
-that the values that are commonly searched are kept on top of the list - this
-way you'll know that on the vast majority of times the number of iterations
-required to find one of those values will be low.
+frequently searched for, a solution would be to make sure that the values that
+are commonly searched are kept on top of the list - this way you'll know that
+on the vast majority of times the number of iterations required to find one of
+those values will be low.
 
 You may take a couple of approaches:
 

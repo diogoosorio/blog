@@ -3,23 +3,19 @@ category: Work
 create_date: 2012-04-14
 description: This is the narrative of my first month working as an IT Consultant / Web Developer at a big outsourcing company - AGAP2.
 title: My First Month as an IT Consultant
-excerpt: A month ago I've written about how <a href="http://diogoosorio.com/blog/entry/my-first-big-job-interview" target="_blank">my first big interview</a> had been an huge success. Well I got the job and since the 15th of last month I'm working for <a href="http://www.agap2.com/" target="_blank">AGAP2</a> as a PHP Web Developer. <a href="http://www.agap2.com/" target="_blank">AGAP2</a> is a Portuguese IT company whose main business area is outsourcing. For someone without any previous experience in working in this regime, I was kind of thrown to the "wolf's layer" (aka the client's office) the day after I signed my contract. This is the narrative of my first month as an IT consultant. 
 keywords: it consutant, outsource it consultant, agap2, web developer, php web developer
 slug: my-first-month-as-an-it-consultant
 ----
 
 It's more than official. [My first big job interview](../blog/entry/my-first-
-big-job-interview)&nbsp_place_holder;has earned me a job doing what I love,
-surrounded by the technologies I love the most.
+big-job-interview) has earned me a job doing what I love, surrounded by the
+technologies I love the most.
 
-I'm officially part of the
-[AGAP2](http://www.agap2.com/)&nbsp_place_holder;consultant team. For those
-who don't know
-[AGAP2](http://www.agap2.com/)&nbsp_place_holder;is&nbsp_place_holder;a
-Portuguese IT company, specialized in outsourcing - the company have
-continually&nbsp_place_holder;been growing for the past 5 years. Their
-headquarters are located in Picoas (Lisbon) from where they manage a large
-team of consultants.
+I'm officially part of the [AGAP2](http://www.agap2.com/) consultant team. For
+those who don't know [AGAP2](http://www.agap2.com/) is a Portuguese IT
+company, specialized in outsourcing - the company have continually been
+growing for the past 5 years. Their headquarters are located in Picoas
+(Lisbon) from where they manage a large team of consultants.
 
 After the interview I found very little documentation about how a company like
 AGAP works. I simply couldn't find any report of someone who actually had
@@ -59,8 +55,6 @@ Needless to say that this "co-dependency" means that my relationship with my
 manager is very relaxed, we're both basically there to kick-ass and mutually
 interested that everything works out for both of us.
 
-&nbsp_place_holder;
-
 ### Is something like AGAP2 for me?
 
 If you're young, eager for adventure and want to gather as much experience as
@@ -92,8 +86,6 @@ the ugliest, meanest code ever written and still deliver the end solution
 while preserving your sanity and ultimately you're someone who values being
 around different people and environments, then yes this is a challenge you
 should take some point down the road.
-
-&nbsp_place_holder;
 
 ### What have you been up to?
 

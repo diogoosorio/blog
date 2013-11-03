@@ -3,7 +3,6 @@ category: Work
 create_date: 2013-05-18
 description: Being the weird guy that I am, I've been thinking what would be the most important lessons I would tell myself, if I had the chance to go back on year and talk to myself.
 title: What I would like to tell to 'one-year-ago' me
-excerpt: Being the weird guy that I am, I've been thinking what would be the most important lessons I would tell myself, if I had the chance to go back on year and talk to myself. Professionally this past year meant a major leap forward, but it was also a pretty damn hard year - so here's the lessons I've retained working the past year at Sapo. An warning, this is a <a href="http://www.imdb.com/title/tt1517260/" target="_blank">The Host</a> styled entry, so if you're not really into some schizophrenicish, move along.
 keywords: programming, sapo, working, developer
 slug: what-i-would-tell-to-one-year-ago-me
 ----
@@ -16,8 +15,6 @@ While we're on that topic, I think it would be cool if I'd share some pointers
 with you, there are certainly a lot of things that would love to tell 'one
 year ago me', so listen up - this is going to bail you out from some major
 headaches.
-
-&nbsp_place_holder;
 
 ### They're not geniouses
 
@@ -35,8 +32,6 @@ probably give you a hard time at first (just because), but they're cool,
 they'll listen and they'll make sure they throw every single one of your
 arguments to the ground. If they don't, congratulations you've just won that
 argument, give yourself a pat on your back.
-
-&nbsp_place_holder;
 
 ### Communication is paramount
 
@@ -78,8 +73,6 @@ that impacts your database schema and has repercussions deep within three or
 four domain objects, it needs time to be done. Time, is that simple - make
 them see the light.
 
-&nbsp_place_holder;
-
 ### Clean code matters
 
 The deadline absolutely does not justify everything. Always remember that the
@@ -109,8 +102,6 @@ places in your code that are volatile and turn that variable information into
 somekind of meta-information. Try not to "hard-code" anything, it'll come back
 later to bite you in the ass.
 
-&nbsp_place_holder;
-
 ### Choose well when to refactor
 
 As a programmer you have a major flaw - you don't know when to refactor. Today
@@ -139,8 +130,6 @@ thinking that you should have implode that class)? Will you be introducing a
 new feature that will require that you decompose that nasty class into a more
 modular solution? Bottom line - don't refactor just because.
 
-&nbsp_place_holder;
-
 ### Testing your code is great, but...
 
 Don't give in to the hype. Yeah unit/behavioral testing is great, but don't
@@ -163,8 +152,6 @@ creative they can be inserting new data into your application. So do try to
 spot places where your code has a probability to break and deal with the
 problem accordingly (log relevant information and guarantee that no data is
 lost/gets corrupted).
-
-&nbsp_place_holder;
 
 ### Keep studying!
 
@@ -193,8 +180,6 @@ you happen to have to write a small script to do whatever, write it in Python.
 If you have to provision a machine, go learn Puppet or Chef. Make a personal
 thing to break the (technological) routine.
 
-&nbsp_place_holder;
-
 ### Trust your team
 
 Another thing that you'll learn is that is absolutely essential to trust your
@@ -220,8 +205,6 @@ gone. And sooner or later most of the guys you look up to will also be gone,
 so exploit the shit out of them while you can - absorb every piece of
 knowledge they have to offer before its too late. You'll learn stuff that
 doesn't come in your precious books and you'll learn stuff much faster.
-
-&nbsp_place_holder;
 
 ### Have fun!
 

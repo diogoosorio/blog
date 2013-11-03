@@ -3,7 +3,6 @@ category: PHP
 create_date: 2012-01-24
 description: Test Driven Development (TDD) is a programming process in which you write tests, before touching any actual code. In this post I'll tell you a bit about Unit Testing using PHPUnit.
 title: Test Driven Development (TDD) using PHPUnit
-excerpt: It has happened way too many times. You develop your application, everything seems to be working smoothly - all the features that you wanted are in place and all the application's logic seems to be working perfectly. When you turn the application to the production server, "hell breaks loose". Something, somewhere is broken and you don't quite know what it is. Well Test Driven Development (TDD) is a programming process in which you write tests before creating any actual code in order to reduce problems like the one above. In this article I'll tell you a bit about Unit Testing using PHPUnit.
 keywords: phpunit, php tdd, test driven development php, tdd phpunit, test driven development phpunit
 slug: test-driven-development-tdd-using-phpunit
 ----
@@ -33,13 +32,11 @@ now, not only should you be antecipating a long night without sleep, but you
 should also be contemplating to put up a lot of hours on the project that you
 wasn't expecting - just to solve the mess...
 
-&nbsp_place_holder;
-
 ### Enters TDD - Test Driven Development
 
 Well if the situation I've posted above rings any bell, well you'll be as
-happy as I did when I read about&nbsp_place_holder;**Test Driven
-Development**. So what exactly is TDD?
+happy as I did when I read about **Test Driven Development**. So what exactly
+is TDD?
 
 TDD is a development process in which you write snippets of code whose purpose
 is to test all the situations that your actual code might be subjected to
@@ -49,7 +46,7 @@ it's deployed to production.
 In simpler terms, you give some input to your code\give it an order and then
 you test the outcome it provides (comparing it to what the result should be).
 
-![TDD Flow](../../public/images/blog/tdd_flow.gif)
+![TDD Flow](/static/images/blog/tdd_flow.gif)
 
 In TDD you actually write the tests before you write the code itself. So when
 you start writing your actual code you should already have a set of tests, all
@@ -59,9 +56,7 @@ After the code is developed, you run the tests yet again (hopefully some of
 them should pass this time) and you simply work through the code that is not
 passing the tests, until you get it right.
 
-&nbsp_place_holder;
-
-### Why use TDD?&nbsp_place_holder;
+### Why use TDD?
 
 Well, the main reasons I'd point out would be:
 
@@ -72,11 +67,11 @@ Usually the final outcome is better, more expressive and well structured code.
   
   
 
-  2. It tests your code (DUH!). You should test your code for [edge cases](http://en.wikipedia.org/wiki/Edge_case),&nbsp_place_holder;invalid inputs&nbsp_place_holder;and general cases - that means that you should not only write tests that handle what you'd consider "normal" situations, but also extreme situations and even situations where the input given to your method\function are purelly invalid (ex. passing a String to a method that expects an Int as argument).  
+  2. It tests your code (DUH!). You should test your code for [edge cases](http://en.wikipedia.org/wiki/Edge_case), invalid inputs and general cases - that means that you should not only write tests that handle what you'd consider "normal" situations, but also extreme situations and even situations where the input given to your method\function are purelly invalid (ex. passing a String to a method that expects an Int as argument).  
   
   
 
-  3. &nbsp_place_holder;It can turn you into a more productive person. Yeah, that's right [studies](http://theruntime.com/blogs/jacob/archive/2008/01/22/tdd-proven-effective-or-is-it.aspx)&nbsp_place_holder;show that by using TDD you end up, not only creating better software, but also (or may I say, consequently?) are more productive.  
+  3. It can turn you into a more productive person. Yeah, that's right [studies](http://theruntime.com/blogs/jacob/archive/2008/01/22/tdd-proven-effective-or-is-it.aspx) show that by using TDD you end up, not only creating better software, but also (or may I say, consequently?) are more productive.  
   
   
 
@@ -86,28 +81,20 @@ When I get into this cycle, programming becomes like a game. I first try to
 "break" the code I haven't even written yet and then I neatly try to get
 things working. :)
 
-&nbsp_place_holder;
-
 ### Meet PHPUnit
 
-[PHPUnit is a
-framework](http://www.phpunit.de/manual/current/en/)&nbsp_place_holder;whose
+[PHPUnit is a framework](http://www.phpunit.de/manual/current/en/) whose
 purpose is exactly allow you to write tests in which you assert that every
 output is what it should be. It also includes an way for you to run the tests
 - while I suppose it would be fun to write my own Unit Testing framework,
 PHPUnit provides pretty much everything you need and it's a stable, rock-
 solid, piece of sofware (so why reivent the wheel?).
 
-&nbsp_place_holder;
-
-&nbsp_place_holder;
-
 ### TDD Demonstration (Sample Code)
 
 Lets get to the fun part and get our hands dirty with some code. In this
 example, lets assume that we want to write a simple authentication class that
-contains two methods -&nbsp_place_holder;**login(****)&nbsp_place_holder;**and
-&nbsp_place_holder;**isLogged()**.
+contains two methods - **login(****) **and **isLogged()**.
 
 The first method (**login****()**) should accept two arguments - an _username_
 and a _password_. It should also throw an exception if the arguments passed
@@ -158,11 +145,7 @@ So here's a sample test:
     	}
     }
 
-&nbsp_place_holder;
-
 And the initial class:
-
-&nbsp_place_holder;
 
     
     <?php
@@ -189,12 +172,8 @@ And the initial class:
     	}
     }
 
-&nbsp_place_holder;
-
-If we run the test now, it should return nothing but failures. Just
-enter&nbsp_place_holder;_phpunit authenticationtestt.php_. Here's the output:
-
-&nbsp_place_holder;
+If we run the test now, it should return nothing but failures. Just enter
+_phpunit authenticationtestt.php_. Here's the output:
 
     
     PHPUnit 3.6.5 by Sebastian Bergmann.
@@ -217,12 +196,8 @@ enter&nbsp_place_holder;_phpunit authenticationtestt.php_. Here's the output:
     FAILURES!
     Tests: 2, Assertions: 2, Failures: 2.
 
-&nbsp_place_holder;
-
 So we now have the tests written and a class that fails every test. So, lets
 complete the class in order for it to be able to pass the tests:
-
-&nbsp_place_holder;
 
     
     <?php
@@ -263,8 +238,6 @@ complete the class in order for it to be able to pass the tests:
     	}
     }
 
-&nbsp_place_holder;
-
 After running the cases yet again, you'll see that this time every test gets
 passed:
 
@@ -276,8 +249,6 @@ passed:
     Time: 0 seconds, Memory: 4.25Mb
     
     OK (2 tests, 4 assertions)
-
-&nbsp_place_holder;
 
 I hope that this small example is sufficient for anyone to understand how TDD
 works. If you have any problem or want to make any comment, feel free to do

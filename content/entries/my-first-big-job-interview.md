@@ -3,7 +3,6 @@ category: Freelancer
 create_date: 2012-03-16
 description: This is narrative of my first day of job hunting, how I got two interviews in 50 minutes (literally) and my first interview... ever. 
 title: My First Big Job Interview
-excerpt: Yesterday I started to look for a new professional challenge. I guess the long hours working alone and the fact that I've spent the last couple of months taking on projects that were not very challenging took made me rethink if I was doing what I wanted to do with my life. After a bit of preparation yesterday I've finally sent my first replies to job offers. This is the report of my first day of job hunting and its direct result - my first job interview.
 keywords: interview, job hunting, employer, technical interview, behavioural interview
 slug: my-first-big-job-interview
 ----
@@ -27,7 +26,7 @@ really wanted to work for - places that are contradicting the negative
 economic tendency and were full of people with ambition and talent. To be
 honest at the time I wasn't even sure that those companies would even look at
 the resume, but hey I had nothing to loose, so why
-not?![](../../public/images/blog/surprised.jpg)
+not?![](/static/images/blog/surprised.jpg)
 
 I swear that within 25 minutes I received the first call. After surpassing the
 initial mental block (it took me a while to assimilate that the call was
@@ -47,12 +46,9 @@ interview - Sure I'd like to meet you and your company. No, tomorrow morning I
 can't, I already have another commitment. Yes, Monday morning will do
 perfectly fine for me.
 
-&nbsp_place_holder;In 50 minutes I've scored 2 interviews in 2 companies I
-hand picked because I really wanted to work there. I still can't believe it
-and I praying to any god that may exist that this great start will lead me to
-a great place to work. :)
-
-&nbsp_place_holder;
+In 50 minutes I've scored 2 interviews in 2 companies I hand picked because I
+really wanted to work there. I still can't believe it and I praying to any god
+that may exist that this great start will lead me to a great place to work. :)
 
 ### Phase 2 - Behavioural Interview
 
@@ -60,14 +56,13 @@ Anyway, after dealing with the first panic attack I had what had to be done,
 I've made myself presentable and researched what was possible about the
 company. Unfortunately I didn't have the time to do a quick review on what
 could be asked during the technical interview - in my gut I knew XML would be
-a topic and well, I confess that I hadn't work with XML for a long
-time.&nbsp_place_holder;
+a topic and well, I confess that I hadn't work with XML for a long time.
 
-![](../../public/images/blog/int.gif)
+![](/static/images/blog/int.gif)
 
 I woke up early, got in the shower, shaved, had a decent breakfast (not very
 usual) and gave a quick look at the news. At 9AM I got into the train and at
-9:45AM I arrived to the company's office.&nbsp_place_holder;
+9:45AM I arrived to the company's office.
 
 After waiting a bit outside (the interview was scheduled to start at 10:15), I
 walked in and was told to wait a bit for the interviewer. And the fun stuff
@@ -77,24 +72,21 @@ The first part of the interview was a personal / professional assessment. The
 usual stuff I assume - I walked through my resume with the interviewer
 detailing what I had done on each one of my previous professional experiences.
 
-&nbsp_place_holder;We talked about what I like doing and what I expected that
-my future would be like. Finally the interviewer gave me a deeper
-understanding about how the company worked and what they believed in. I
-interrupted a couple of times with some genuine questions - "If I get the
-position, what will I do precisely?", "What is the company's policy regarding
-people who are employed but still studying?".
+We talked about what I like doing and what I expected that my future would be
+like. Finally the interviewer gave me a deeper understanding about how the
+company worked and what they believed in. I interrupted a couple of times with
+some genuine questions - "If I get the position, what will I do precisely?",
+"What is the company's policy regarding people who are employed but still
+studying?".
 
-&nbsp_place_holder;This part of the interview was a breeze. I loved what I was
-hearing and I guess the interviewer also liked what I had to tell him. During
-the process I got the impression that this interview would be the first and if
-it went well, I would get called another time for the technical interview.
+This part of the interview was a breeze. I loved what I was hearing and I
+guess the interviewer also liked what I had to tell him. During the process I
+got the impression that this interview would be the first and if it went well,
+I would get called another time for the technical interview.
 
-&nbsp_place_holder;I don't know if I got that wrong, or I simply caused an
-impression because suddenly the technical interview just got re-scheduled for
-"right now". "Well great - I can wrap this up right know", I immediately
-thought.
-
-&nbsp_place_holder;
+I don't know if I got that wrong, or I simply caused an impression because
+suddenly the technical interview just got re-scheduled for "right now". "Well
+great - I can wrap this up right know", I immediately thought.
 
 ### Phase 3 - Technical Interview
 
@@ -109,14 +101,13 @@ freaking XML. What are namespaces used for (or something like that). I
 immediately froze. My brain immediately suffered a buffer overflow. To be
 honest I really don't remember what I answered, but it was wrong. Even worst I
 immediately started staggering and from that point on, no matter what I said
-it just didn't feel right...![](../../public/images/blog/php-interview-
+it just didn't feel right...![](/static/images/blog/php-interview-
 questions.jpg)
 
-&nbsp_place_holder;At that point I remember thinking of those trendy posters
-"Keep calm and carry on". I faked not understanding the next question and took
-the time to recompose.&nbsp_place_holder;After that disaster I imagine the
-interviewer started to guess what I knew. Were I a complete incompetent? Was I
-wasting his time?
+At that point I remember thinking of those trendy posters "Keep calm and carry
+on". I faked not understanding the next question and took the time to
+recompose. After that disaster I imagine the interviewer started to guess what
+I knew. Were I a complete incompetent? Was I wasting his time?
 
 Second question, what's the difference between a GET and a POST request. As
 basic as it gets, right? I think I was so nervous at that point that
@@ -138,11 +129,7 @@ foreign key)? Do you know Javascript? What have you developed using HTML5?
 I guess I managed to give a couple of satisfactory answers, at least the
 interview wasn't abruptly ended.
 
-&nbsp_place_holder;
-
-&nbsp_place_holder;
-
-### Phase 4 - Dig a Little Deeper&nbsp_place_holder;
+### Phase 4 - Dig a Little Deeper
 
 With the technical part out of the way I made my second big mistake. I was
 asked why I would want to work there. You know that awkward moment when you
@@ -155,7 +142,7 @@ well there's a financial motivation.". Warning to everyone - this is not what
 the interviewer wants to hear when he asks you why you'd want to integrate its
 team.
 
-![](../../public/images/blog/hole.jpg)The thing is I was fully aware that I
+![](/static/images/blog/hole.jpg)The thing is I was fully aware that I
 shouldn't have said that. The reply was swift and utterly destructive - "Yeah
 but one does not work just for money. Do you work just to obtain some money at
 the end of the month?". Am I stupid or what?
@@ -174,13 +161,11 @@ without having a professional challenge to look forward to.
 
 Well once again I immediately tried to overcome yet another error. I said what
 I've should have said in the first place and apparently also got through that
-lump successfully.&nbsp_place_holder;
+lump successfully.
 
 The interviewer finally made me a last question - "So what do you have to
 offer our company?". I think I got this one right - I'm passionate about what
 I do, I enjoy working with a team, I'm an enthusiast, …
-
-&nbsp_place_holder;
 
 ### Phase 5 - Profit! Really?!
 
@@ -201,10 +186,8 @@ Anyway I just wanted to share this experience, I think it might be useful for
 someone, somewhere. If I have time, Monday I'll try to update the blog and
 tell you how the second interview went.
 
-&nbsp_place_holder;
-
-_PS - As you might have guessed I intentionally kept&nbsp_place_holder;__the
-company's name&nbsp_place_holder;__undisclosed. Although I don't think it
-could affect the outcome, I don't want to ruin it and I really don't think
-it's appropriate to disclose who am I referring to, without their permission._
+_PS - As you might have guessed I intentionally kept __the company's name
+__undisclosed. Although I don't think it could affect the outcome, I don't
+want to ruin it and I really don't think it's appropriate to disclose who am I
+referring to, without their permission._
 
