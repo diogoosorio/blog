@@ -1,10 +1,11 @@
 #!/usr/env/python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, redirect, render_template, url_for
+from flask import Flask, redirect, render_template, url_for, g
 from flask_ink.ink import Ink
 from flask.ext.cache import Cache
-from settings import SETTINGS, CACHE_SETTINGS
+from settings import SETTINGS, CACHE_SETTINGS, GITHUB_SETTINGS
+from repository import GithubRepository
 
 app = Flask(__name__)
 app.config.update(SETTINGS)
@@ -20,9 +21,15 @@ def load_asset(filename):
     return url_for('static', filename=filename)
 
 
+@app.before_request
+def before_request():
+    g.repository = GithubRepository(GITHUB_SETTINGS)
+
+
 @app.route('/')
 def index():
     return redirect('/blog', 301)
+
 
 @cache.cached(timeout=1200)
 @app.route('/blog/<int:page>/')
@@ -30,15 +37,18 @@ def index():
 def blog(page=1):
     return str(page)
 
+
 @app.route('/blog/rss/')
 @cache.cached(timeout=1200)
 def rss():
     return 'RSS'
 
+
 @cache.memoize(timeout=3600)
 @app.route('/blog/entry/<post_name>')
 def blog_detail(post_name):
     return post_name
+
 
 if __name__ == '__main__':
     Ink(app)

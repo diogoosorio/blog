@@ -37,8 +37,14 @@ def create_blogentry(filename, contents):
     with open(absolute_filepath, 'w') as f:
         f.write(contents.encode('utf8'))
 
+def rename_blogentry(filename, newfilename):
+    filepath = os.path.join(ENTRIES_DIR, filename)
+    newfilepath = os.path.join(ENTRIES_DIR, newfilename)
+    os.rename(filepath, newfilepath)
 
 entries = entries()
+file_list = {}
+
 for i in range(0, (entries.count() - 1)):
     meta = extract_metadata(entries[i])
     content = extract_content(entries[i])
@@ -48,3 +54,14 @@ for i in range(0, (entries.count() - 1)):
     filename = meta['slug'].replace('-', '_')+'.md'
     file_content = "----\n%s\n----\n\n%s" % (meta_str, content)
     create_blogentry(filename, file_content)
+
+    file_list[meta['create_date']] = filename
+
+# Another passage to sort/rename tne entries
+i = 1
+for key in sorted(file_list.iterkeys()):
+    filename = file_list[key]
+    prefix = str(i).zfill(3)
+    new_filename = prefix + "_" + filename
+    rename_blogentry(filename, new_filename)
+    i += 1
