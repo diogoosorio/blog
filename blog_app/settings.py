@@ -29,7 +29,8 @@ CACHE_SETTINGS = {
 
 GITHUB_SETTINGS = {
     'username': 'diogoosorio',
-    'password': '{+4=ahe[oYi\IJ!C//Ij/LZdN'
+    'password': '{+4=ahe[oYi\IJ!C//Ij/LZdN',
+    'repository': 'diogosorio/blog-entries'
 }
 
 if environment == 'development':
