@@ -4,3 +4,5 @@ flask_ink
 git+https://github.com/diogoosorio/flask-sapo-ink.git@master#egg=flask_ink
 
 html2text==3.0.2
+
+pymongo==2.1.1
