@@ -3,6 +3,7 @@
 
 from flask import Flask, redirect, render_template, url_for
 from flask_ink.ink import Ink
+from flask.ext.cache import Cache
 from settings import Settings
 
 app = Flask(__name__)
@@ -36,6 +37,7 @@ def blog_detail(post_name):
 
 if __name__ == '__main__':
     Ink(app)
+    Cache(app)
 
     app.jinja_env.globals.update(load_asset=load_asset)
     app.run(host=Settings['HOST'])
