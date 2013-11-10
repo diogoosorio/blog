@@ -1,7 +1,7 @@
 #!/usr/env/python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, redirect, render_template, url_for, g
+from flask import Flask, redirect, render_template, url_for, g, abort
 from flask_ink.ink import Ink
 from flask.ext.cache import Cache
 from settings import SETTINGS, CACHE_SETTINGS
@@ -24,7 +24,9 @@ def load_asset(filename):
 
 @app.before_request
 def before_request():
-    g.repository = LocalRepository(app.config['REPO_DIRECTORY'], MisakaWrapper())
+    content_dir = app.config['REPO_DIRECTORY']
+    parser = MisakaWrapper()
+    g.repository = LocalRepository(content_dir, parser, cache)
 
 
 @app.route('/')
@@ -38,6 +40,10 @@ def index():
 def blog(page=1):
     pageoff = (page - 1) * app.config['PAGESIZE']
     entries = g.repository.getfiles('entries', app.config['PAGESIZE'], pageoff)
+
+    if not entries:
+        abort(404)
+
     return render_template('blog.html', entries=entries, page=page)
 
 
@@ -57,4 +63,4 @@ if __name__ == '__main__':
     Ink(app)
 
     app.jinja_env.globals.update(load_asset=load_asset)
-    app.run(host=SETTINGS['HOST'])
+    app.run(host=app.config['HOST'])

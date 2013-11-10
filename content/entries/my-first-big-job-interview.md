@@ -26,7 +26,9 @@ really wanted to work for - places that are contradicting the negative
 economic tendency and were full of people with ambition and talent. To be
 honest at the time I wasn't even sure that those companies would even look at
 the resume, but hey I had nothing to loose, so why
-not?![](/static/images/blog/surprised.jpg)
+not? 
+
+![](/static/images/blog/surprised.jpg)
 
 I swear that within 25 minutes I received the first call. After surpassing the
 initial mental block (it took me a while to assimilate that the call was
