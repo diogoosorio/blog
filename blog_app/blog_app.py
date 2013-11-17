@@ -1,7 +1,7 @@
 #!/usr/env/python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, redirect, render_template, url_for, g, abort
+from flask import Flask, redirect, render_template, url_for, g, abort, request
 from flask_ink.ink import Ink
 from flask.ext.cache import Cache
 from settings import SETTINGS, CACHE_SETTINGS
@@ -35,10 +35,12 @@ def index():
 
 
 @cache.cached(timeout=1200)
-@app.route('/blog/<int:page>/')
 @app.route('/blog/')
-def blog(page=1):
+def blog():
+    page = request.args.get('page')
+    page = int(page) if page is not None else 1
     pageoff = (page - 1) * app.config['PAGESIZE']
+
     entries = g.repository.getfiles('entries', app.config['PAGESIZE'], pageoff)
 
     if not entries:
