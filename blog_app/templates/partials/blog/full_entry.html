@@ -1,0 +1,32 @@
+<article id="my-article">
+    <header class="second-anchor-transition">
+        <a href="{{ url_for("blog_detail", post_name=entry['meta']['slug']) }}">
+            <h1>{{ entry['meta']['title'] }}</h1>
+            <p>
+                <time datetime="2013-11-02T19:46+00:00" pubdate>{{ entry['meta']['create_date'] }}</time>
+            </p>
+        </a>
+    </header>
+
+    <div class="content">
+        {{ entry['content']|safe }}
+    </div>
+
+    <footer class="second-anchor-transition">
+        <div class="colum-group ">
+
+            {#
+            <div class="large-70 medium-60 small-50 content-right">
+                <ul class="unstyled inline-list gray">
+                    <li>
+                        <a href="#">Development</a>
+                    </li>
+                    <li>
+                        <a href="#">PHP</a>
+                    </li>    
+                </ul>
+            </div>
+            #}
+        </div>
+    </footer>
+</article>
