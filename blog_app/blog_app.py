@@ -27,7 +27,7 @@ def load_asset(filename):
 def before_request():
     content_dir = app.config['REPO_DIRECTORY']
     parser = MisakaWrapper()
-    g.repository = LocalRepository(content_dir, parser, cache)
+    g.repository = LocalRepository(content_dir, parser, cache, app.config['PAGESIZE'])
 
 
 @app.route('/')
@@ -40,10 +40,9 @@ def index():
 def blog():
     page = request.args.get('page')
     page = int(page) if page is not None else 1
-    pageoff = (page - 1) * app.config['PAGESIZE']
 
-    template_variables = g.repository.getfiles('entries', app.config['PAGESIZE'], pageoff)
-    template_variables['pagination'] = BlogPagination(page=page, total=template_variables['total'], record_name='pages')
+    template_variables = g.repository.getfiles('entries', page)
+    template_variables['pagination'] = BlogPagination(page=page, total=template_variables['total'], per_page=app.config['PAGESIZE'])
 
     if not template_variables['entries']:
         abort(404)
