@@ -9,17 +9,7 @@
         </div>
 
         <nav class="ink-navigation push-right subtract-top-margin">
-            <ul class="pagination black rounded shadowed separated push-right">
-                <li>
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li class="next">
-                    <a href="#">Next</a>
-                </li>
-            </ul>
+            {{ pagination.links|safe }}
         </nav>
     </div>
 </section>

@@ -7,6 +7,7 @@ from flask.ext.cache import Cache
 from settings import SETTINGS, CACHE_SETTINGS
 from repository import LocalRepository
 from parsers import MisakaWrapper
+from pagination import BlogPagination
 
 app = Flask(__name__)
 app.config.update(SETTINGS)
@@ -42,7 +43,7 @@ def blog():
     pageoff = (page - 1) * app.config['PAGESIZE']
 
     template_variables = g.repository.getfiles('entries', app.config['PAGESIZE'], pageoff)
-    template_variables['page'] = page
+    template_variables['pagination'] = BlogPagination(page=page, total=template_variables['total'], record_name='pages')
 
     if not template_variables['entries']:
         abort(404)
