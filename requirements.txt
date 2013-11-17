@@ -2,7 +2,7 @@ Flask==0.10.1
 
 git+https://github.com/diogoosorio/flask-sapo-ink.git@master#egg=flask_ink
 
-html2text==3.0.2
+html2text==3.200.3
 
 pymongo==2.1.1
 
