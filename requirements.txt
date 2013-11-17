@@ -11,3 +11,5 @@ Flask-Cache==0.12
 misaka==1.0.2
 
 BeautifulSoup==3.2.1
+
+flask-paginate-0.1.5
