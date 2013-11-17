@@ -39,9 +39,31 @@ class BaseParser(object):
         return [final_meta, content]
 
     def make_excerpt(self, content):
-        no_html = BeautifulSoup.BeautifulSoup(content).findAll(text=True)
-        no_html = no_html[0:self.EXCERPT_MAX_LENGTH]
-        return no_html
+        soup = BeautifulSoup.BeautifulSoup(content)
+
+        p = soup.p
+        if p is None:
+            return content
+
+        excerpt = [p.renderContents()]
+        next_sibling = None
+        next_element = p
+
+        while next_sibling is None:
+            next_element = next_element.nextSibling
+
+            # BeautifulSoup was returning newline characters as the next sibling,
+            # we want to discard those...
+            if not isinstance(next_element, BeautifulSoup.Tag):
+                continue
+
+            validtag = next_element.name.lower() == 'p'
+            next_sibling = next_element if validtag else False
+
+        if next_sibling:
+            excerpt.append(next_sibling.renderContents())
+
+        return "\n".join('<p>{0}</p>'.format(p) for p in excerpt)
 
 
 
