@@ -41,12 +41,13 @@ def blog():
     page = int(page) if page is not None else 1
     pageoff = (page - 1) * app.config['PAGESIZE']
 
-    entries = g.repository.getfiles('entries', app.config['PAGESIZE'], pageoff)
+    template_variables = g.repository.getfiles('entries', app.config['PAGESIZE'], pageoff)
+    template_variables['page'] = page
 
-    if not entries:
+    if not template_variables['entries']:
         abort(404)
 
-    return render_template('blog.html', entries=entries, page=page)
+    return render_template('blog.html', **template_variables)
 
 
 @app.route('/blog/rss/')

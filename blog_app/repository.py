@@ -33,9 +33,9 @@ class LocalRepository(object):
 
         self.cache.set(cache_key, files, self.CACHE_GETFILES_TIMEOUT)
         sliced_files = files[offset:(limit + offset)] if type(limit) is int else files[offset:]
-        response = {'total': len(files), 'limit': limit, 'offset': offset, 'files': sliced_files}
+        response = {'total': len(files), 'limit': limit, 'offset': offset, 'entries': sliced_files}
 
-        return sliced_files
+        return response
 
 
     def testdir(self, directory):
