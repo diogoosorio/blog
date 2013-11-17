@@ -10,7 +10,7 @@ class BaseParser(object):
 
     EXCERPT_MAX_LENGTH = 600
 
-    def extrafilemeta(self, filepath):
+    def extractfilemeta(self, filepath):
         with file(filepath) as f:
             content = f.read().decode('utf-8')
 

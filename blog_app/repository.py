@@ -15,6 +15,21 @@ class LocalRepository(object):
 
         self.testdir(self.base_dir)
 
+    def getfile(self,directory, slug):
+        cache_key = "file-detail-{}".format(slug)
+        entry = self.cache.get(cache_key)
+
+        if not entry:
+            filename = slug + ".md"
+            filepath = os.path.abspath(os.path.join(self.base_dir, directory, filename))
+
+            if os.path.exists(filepath):
+                meta, content = self.parser.extractfilemeta(filepath)
+                entry = {'meta': meta, 'content': content}
+
+        return entry
+
+
     def getfiles(self, directory, page):
         cache_key = "all-files-{}".format(directory)
         files = self.cache.get(cache_key)
@@ -25,7 +40,7 @@ class LocalRepository(object):
             files = []
 
             for file in os.listdir(directory):
-                meta, content = self.parser.extrafilemeta(os.path.join(directory, file))
+                meta, content = self.parser.extractfilemeta(os.path.join(directory, file))
                 parsed_file = {'meta': meta, 'content': content}
                 files.append(parsed_file)
 

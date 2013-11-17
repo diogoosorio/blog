@@ -59,7 +59,12 @@ def rss():
 @cache.memoize(timeout=3600)
 @app.route('/blog/<post_name>')
 def blog_detail(post_name):
-    return post_name
+    entry = g.repository.getfile('entries', post_name)
+
+    if not entry:
+        abort(404)
+
+    return render_template('detail.html', entry=entry)
 
 
 if __name__ == '__main__':
