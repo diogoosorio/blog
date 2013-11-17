@@ -1,6 +1,6 @@
 <article id="my-article">
     <header class="second-anchor-transition">
-        <a href="#">
+        <a href="{{ url_for("blog_detail", post_name=entry['meta']['slug']) }}">
             <h1>{{ entry['meta']['title'] }}</h1>
             <p>
                 <time datetime="2013-11-02T19:46+00:00" pubdate>{{ entry['meta']['create_date'] }}</time>
@@ -15,7 +15,7 @@
     <footer class="second-anchor-transition">
         <div class="colum-group ">
             <div class="large-30 medium-40 small-50">
-                <a class="green" href="#">
+                <a class="green" href="{{ url_for("blog_detail", post_name=entry['meta']['slug']) }}">
                     Read article
                     <i class="icon-chevron-right"></i>
                 </a>

@@ -57,7 +57,7 @@ def rss():
 
 
 @cache.memoize(timeout=3600)
-@app.route('/blog/entry/<post_name>')
+@app.route('/blog/<post_name>')
 def blog_detail(post_name):
     return post_name
 

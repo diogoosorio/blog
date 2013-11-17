@@ -30,6 +30,8 @@ class BaseParser(object):
         for key, val in meta_matches:
             if key == 'create_date':
                 val = datetime.datetime.strptime(val.strip(), '%Y-%m-%d').date()
+            else:
+                val = val.strip()
 
             final_meta[key] = val
 
