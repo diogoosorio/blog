@@ -20,7 +20,8 @@ SETTINGS = {
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',
     'ENVIRONMENT': environment,
-    'HOST': 'diogoosorio.com'
+    'HOST': 'diogoosorio.com',
+    'DISQUS_SHORTNAME': 'diogoosorio'
 }
 
 CACHE_SETTINGS = {
@@ -37,5 +38,6 @@ if environment == 'development':
     SETTINGS['SERVER_NAME'] = None
     SETTINGS['HOST'] = '0.0.0.0'
     SETTINGS['INK_ASSET_MINIFY'] = False
+    SETTINGS['DISQUS_SHORTNAME'] = 'diogoosorio-blog-dev'
 
     CACHE_SETTINGS['CACHE_TYPE'] = 'null'
