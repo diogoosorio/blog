@@ -63,9 +63,13 @@
     var disqus_shortname = '{{ config['DISQUS_SHORTNAME'] }}';
 
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        var files = ['embed.js', 'count.js'];
+
+        for (var i = 0; i < files.length; i++) {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/' + files[i];
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }
     })();
 </script>
 {% endblock %}

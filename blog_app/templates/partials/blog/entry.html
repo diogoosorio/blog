@@ -21,18 +21,9 @@
                 </a>
             </div>
 
-            {#
             <div class="large-70 medium-60 small-50 content-right">
-                <ul class="unstyled inline-list gray">
-                    <li>
-                        <a href="#">Development</a>
-                    </li>
-                    <li>
-                        <a href="#">PHP</a>
-                    </li>    
-                </ul>
+                <a class="green" href="{{ url_for("blog_detail", post_name=entry['meta']['slug']) }}#disqus_thread"></a>
             </div>
-            #}
         </div>
     </footer>
 </article>
