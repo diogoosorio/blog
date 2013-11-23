@@ -10,6 +10,7 @@ SETTINGS = {
     'DEBUG': False,
     'TESTING': False,
     'SECRET_KEY': 'sample-secret-key',
+    'HOST': '0.0.0.0',
     'SESSION_COOKIE_DOMAIN': 'diogoosorio.com',
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
@@ -20,7 +21,6 @@ SETTINGS = {
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',
     'ENVIRONMENT': environment,
-    'HOST': 'diogoosorio.com',
     'DISQUS_SHORTNAME': 'diogoosorio'
 }
 
@@ -36,7 +36,6 @@ if environment == 'development':
     SETTINGS['TESTING'] = True
     SETTINGS['SESSION_COOKIE_DOMAIN'] = None,
     SETTINGS['SERVER_NAME'] = None
-    SETTINGS['HOST'] = '0.0.0.0'
     SETTINGS['INK_ASSET_MINIFY'] = False
     SETTINGS['DISQUS_SHORTNAME'] = 'diogoosorio-blog-dev'
     SETTINGS['REPO_DIRECTORY'] = '/workspace/blog/content'
