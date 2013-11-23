@@ -7,6 +7,11 @@ import re
 import datetime
 import houdini as h
 
+class Helper(object):
+    @staticmethod
+    def striptags(html):
+        return ''.join(BeautifulSoup.BeautifulSoup(html).findAll(text=True))
+
 class BaseParser(object):
 
     EXCERPT_MAX_LENGTH = 600
@@ -38,6 +43,7 @@ class BaseParser(object):
 
         content = self.parse(content)
         final_meta['excerpt'] = self.make_excerpt(content)
+        final_meta['excerpt_nohtml'] = Helper.striptags(final_meta['excerpt'])
 
         return [final_meta, content]
 
@@ -85,4 +91,5 @@ class MisakaWrapper(BaseParser):
     def parse(self, text):
         rendered = self.BlogRenderer()
         md = m.Markdown(rendered, extensions=m.EXT_FENCED_CODE)
-        return md.render(text)
+        html = md.render(text)
+        return html

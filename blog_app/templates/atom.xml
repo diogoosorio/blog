@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Diogo's blog</title>
+    <subtitle>News, thoughts and rants about programming, techonology and life in general.</subtitle>
+    <link href="{{ url_for("rss", _external=True) }}" rel="self" />
+    <link href="{{ url_for("blog", _external=True) }}" />
+    <id>urn:uuid:{{ uuid.uuid3(uuid.NAMESPACE_DNS, 'diogoosorio.com') }}</id>
+    <updated>{{ last_entry['meta']['create_date'].strftime('%Y-%m-%dT%H:%M:%SZ') }}</updated>
+
+    {% for entry in entries %}
+        <entry>
+            <title>{{ entry['meta']['title'] }}</title>
+            <link href="{{ url_for('blog_detail', post_name=entry['meta']['slug'], _external=True) }}" />
+            <id>urn:uuid:{{ uuid.uuid3(uuid.NAMESPACE_URL, url_for('blog_detail', post_name=entry['meta']['slug'])) }}</id>
+            <updated>{{ entry['meta']['create_date'].strftime('%Y-%m-%dT%H:%M:%SZ') }}</updated>
+            <summary type="html">{{ entry['meta']['excerpt'] }}</summary>
+            <author>
+                <name>Diogo Os&#243;rio</name>
+                <email>diogo.g.osorio@gmail.com</email>
+            </author>
+        </entry>
+    {% endfor %}
+</feed>

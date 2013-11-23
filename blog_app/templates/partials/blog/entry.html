@@ -3,7 +3,9 @@
         <a href="{{ url_for("blog_detail", post_name=entry['meta']['slug']) }}">
             <h1>{{ entry['meta']['title'] }}</h1>
             <p>
-                <time datetime="2013-11-02T19:46+00:00" pubdate>{{ entry['meta']['create_date'] }}</time>
+            <time datetime="{{ entry['meta']['create_date'].strftime('%Y-%m-%dT%H:%M:%S') }}" pubdate>
+                {{ entry['meta']['create_date'] }}
+            </time>
             </p>
         </a>
     </header>

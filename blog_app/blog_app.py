@@ -1,13 +1,14 @@
 #!/usr/env/python
 # -*- coding: utf-8 -*-
 
-from flask import Flask, redirect, render_template, url_for, g, abort, request
+from flask import Flask, redirect, render_template, url_for, g, abort, request, make_response
 from flask_ink.ink import Ink
 from flask.ext.cache import Cache
 from settings import SETTINGS, CACHE_SETTINGS
 from repository import LocalRepository
 from parsers import MisakaWrapper
 from pagination import BlogPagination
+import uuid
 
 app = Flask(__name__)
 app.config.update(SETTINGS)
@@ -29,6 +30,11 @@ def before_request():
     parser = MisakaWrapper()
     g.repository = LocalRepository(content_dir, parser, cache, app.config['PAGESIZE'])
 
+    # pagination
+    page = request.args.get('page')
+    page = int(page) if page is not None else 1
+    g.page = page
+
 
 @app.route('/')
 def index():
@@ -38,11 +44,8 @@ def index():
 @cache.cached(timeout=1200)
 @app.route('/blog/')
 def blog():
-    page = request.args.get('page')
-    page = int(page) if page is not None else 1
-
-    template_variables = g.repository.getfiles('entries', page)
-    template_variables['pagination'] = BlogPagination(page=page, total=template_variables['total'], per_page=app.config['PAGESIZE'])
+    template_variables = g.repository.getfiles('entries', g.page)
+    template_variables['pagination'] = BlogPagination(page=g.page, total=template_variables['total'], per_page=app.config['PAGESIZE'])
 
     if not template_variables['entries']:
         abort(404)
@@ -53,7 +56,18 @@ def blog():
 @app.route('/blog/rss/')
 @cache.cached(timeout=1200)
 def rss():
-    return 'RSS'
+    template_variables = g.repository.getfiles('entries', g.page)
+
+    g.repository.pagesize = 1
+    last_entry = g.repository.getfiles('entries', 1)
+    last_entry = last_entry['entries'][0] if len(last_entry['entries']) else None
+
+    template_variables['uuid'] = uuid # TODO: This logic shouldn't be on the template...
+    template_variables['last_entry'] = last_entry
+
+    response = make_response(render_template('atom.xml', **template_variables))
+    response.headers['Content-Type'] = 'application/atom+xml'
+    return response
 
 
 @cache.memoize(timeout=3600)
