@@ -99,12 +99,13 @@ def blog_detail(post_name):
     return render_template('detail.html', entry=entry)
 
 
+Ink(app)
+
+log_file = logging.FileHandler(SETTINGS['LOG_LOCATION'])
+log_file.setLevel(logging.ERROR)
+app.logger.addHandler(log_file)
+
+app.jinja_env.globals.update(load_asset=load_asset)
+
 if __name__ == '__main__':
-    Ink(app)
-
-    log_file = logging.FileHandler(SETTINGS['LOG_LOCATION'])
-    log_file.setLevel(logging.ERROR)
-    app.logger.addHandler(log_file)
-
-    app.jinja_env.globals.update(load_asset=load_asset)
     app.run(host=app.config['HOST'])
