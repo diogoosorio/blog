@@ -40,7 +40,6 @@ article header a:hover {
 article .content p {
     font-weight: 200;
     line-height: 2.3em;
-    margin-bottom: 3em;
     font-size: 1.1em;
 }
 
@@ -144,4 +143,9 @@ ul.pagination.rounded.separated li a:hover {
 
 ul.pagination.rounded.separated li a {
     padding: 0.3em 0.6em;
+}
+
+pre {
+    background: #23241f;
+    padding: 5px;
 }
