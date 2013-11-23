@@ -17,6 +17,7 @@ SETTINGS = {
     'REPO_DIRECTORY': '/var/www/diogoosorio.com/content',
     'LOG_LOCATION': '/var/www/diogoosorio.com/logs/flask.log',
     'PAGESIZE': 5,
+    'MINIFY_ASSETS': False,
     'INK_ASSET_MINIFY': True,
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',

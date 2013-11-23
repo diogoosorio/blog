@@ -21,7 +21,7 @@ cache.init_app(app)
 def load_asset(filename):
     environment = app.config['ENVIRONMENT']
 
-    if environment != 'development':
+    if environment != 'development' and app.config['MINIFY_ASSETS']:
         filename = '%s.min.%s' % tuple(filename.rsplit('.', 1))
 
     return url_for('static', filename=filename)
