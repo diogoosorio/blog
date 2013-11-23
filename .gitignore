@@ -38,3 +38,6 @@ nosetests.xml
 
 # Rope
 .ropeproject
+
+# Virtualenv
+venv/*
