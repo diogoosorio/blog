@@ -14,7 +14,7 @@ SETTINGS = {
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
     'SERVER_NAME': 'diogoosorio.com',
-    'REPO_DIRECTORY': '/workspace/blog/content',
+    'REPO_DIRECTORY': '/var/www/diogoosorio.com/content',
     'PAGESIZE': 5,
     'INK_ASSET_MINIFY': True,
     'INK_ASSET_VERSION': '2.2.1',
