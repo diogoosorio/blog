@@ -31,6 +31,7 @@ function start(){
     # Add the log directory
     if [ ! -d $LOG_DIR ]; then
         mkdir $LOG_DIR
+        touch $LOG_DIR/flask.log
         chown -R $UWSGI_USER $LOG_DIR
         chgrp -R $UWSGI_GROUP $LOG_DIR
     fi
