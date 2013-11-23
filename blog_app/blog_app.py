@@ -9,6 +9,7 @@ from repository import LocalRepository
 from parsers import MisakaWrapper
 from pagination import BlogPagination
 import uuid
+import re
 
 app = Flask(__name__)
 app.config.update(SETTINGS)
@@ -68,6 +69,21 @@ def rss():
     response = make_response(render_template('atom.xml', **template_variables))
     response.headers['Content-Type'] = 'application/atom+xml'
     return response
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    path = request.path
+    legacy_match = re.match(r'^/blog/entry/([\w-]+)/?$', path, re.I)
+
+    if legacy_match:
+        slug = legacy_match.group(1)
+        entry = g.repository.getfile('entries', slug)
+
+        if entry:
+            return redirect("/blog/{0}".format(slug), 301)
+
+    return render_template('404.html', path=path)
 
 
 @cache.memoize(timeout=3600)

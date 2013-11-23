@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ink-grid">
+    <div class="column-group gutters">
+        <div class="push-center large-60 medium-80 small-100">
+            <div>
+                <h1>It ain't here, Holmes (404)</h1>
+                <p>
+                    You didn't see this coming, did you? The page you're looking for isn't here. :)
+                </p>
+                <p>
+                    The best I can do for you right now is to take you to my <a href="{{ url_for('index') }}">blog's homepage</a>, or 
+                    that you use the input bellow to search for what you're looking for.
+                </p>
+            </div>
+
+            <div class="vertical-space">
+                <gcse:search></gcse:search>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  (function() {
+    var cx = '011548440360855343130:povi8j1axyu';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+{% endblock %}
