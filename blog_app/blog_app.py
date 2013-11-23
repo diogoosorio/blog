@@ -85,7 +85,7 @@ def page_not_found(e):
         if entry:
             return redirect("/blog/{0}".format(slug), 301)
 
-    return render_template('404.html', path=path)
+    return render_template('404.html', path=path), 404
 
 
 @cache.memoize(timeout=3600)
