@@ -6,9 +6,9 @@ During this first (quick) iteration, the blog entries are being loaded and parse
 
 I had three main objectives in mind, developing this: 
 
-    * To remove the MongoDB dependency that the previous blog version had 
-    * To add a simpler, content centered, responsive design
-    * To be able to write the entries using Markdown
+* To remove the MongoDB dependency that the previous blog version had 
+* To add a simpler, content centered, responsive design
+* To be able to write the entries using Markdown
 
 The three of them were achieved. There are a lot of nice-to-have's that I'd like to add, but one just has so many off-days per week. :)
 
