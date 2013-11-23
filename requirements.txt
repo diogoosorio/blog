@@ -15,3 +15,5 @@ BeautifulSoup==3.2.1
 flask-paginate==0.1.5
 
 houdini.py==0.1.0
+
+pylibmc==1.2.3
