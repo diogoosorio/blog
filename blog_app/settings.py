@@ -13,7 +13,6 @@ SETTINGS = {
     'SESSION_COOKIE_DOMAIN': 'diogoosorio.com',
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
-    'SERVER_NAME': 'diogoosorio.com',
     'REPO_DIRECTORY': '/var/www/diogoosorio.com/content',
     'LOG_LOCATION': '/var/www/diogoosorio.com/logs/flask.log',
     'PAGESIZE': 5,
