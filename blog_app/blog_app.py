@@ -14,7 +14,8 @@ import re
 app = Flask(__name__)
 app.config.update(SETTINGS)
 
-cache = Cache(app, CACHE_SETTINGS)
+cache = Cache(config=CACHE_SETTINGS)
+cache.init_app(app)
 
 def load_asset(filename):
     environment = app.config['ENVIRONMENT']
