@@ -23,7 +23,6 @@
     <meta property="og:description" content="{{ description|default(default_description) }}">
     <meta property="fb:admins" content="100000054831465">
 
-    <!-- SO MANY SOCIAL NETWORKS, WHO THE FUCK WILL USE THIS ANYWAY? -->
     <meta name="twitter:url" content="{{ request.url }}">
     <meta name="twitter:title" content="{{ title|default(default_title) }}">
     <meta name="twitter:description" content="{{ description|default(default_description) }}">
@@ -33,7 +32,7 @@
     {{ super() }}
 
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300italic,700|Lato:400italic' rel='stylesheet' type='text/css'>
-    <link href="{{ load_asset('stylesheets/rainbow-solarized-dark.css') }}" media="screen" rel="stylesheet" type="text/css" charset="utf-8">
+    <link href="{{ load_asset('stylesheets/monokai_sublime.css') }}" media="screen" rel="stylesheet" type="text/css" charset="utf-8">
     <link href="{{ load_asset('stylesheets/style.css') }}" media="screen" rel="stylesheet" type="text/css" charset="utf-8">
 {% endblock %} 
 
@@ -59,8 +58,8 @@
 
 {% block scripts %}
 {{ super() }}
+<script src="{{ load_asset('javascript/highlight.pack.js') }}"></script>
 <script src="{{ load_asset('javascript/app.js') }}"></script>
-<script src="{{ load_asset('javascript/rainbow-custom.min.js') }}" async="true"></script>
 <script type="text/javascript">
     var disqus_shortname = '{{ config['DISQUS_SHORTNAME'] }}';
     (function() {
