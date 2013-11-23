@@ -5,6 +5,7 @@ import BeautifulSoup
 import misaka as m
 import re
 import datetime
+import houdini as h
 
 class BaseParser(object):
 
@@ -70,5 +71,18 @@ class BaseParser(object):
 
 
 class MisakaWrapper(BaseParser):
+
+    class BlogRenderer(m.HtmlRenderer):
+        def block_code(self, code, language):
+            escaped_code = h.escape_html(code)
+            html = "<pre><code"
+            html += " data-language=\"{0}\">".format(language) if language else ">"
+            html += escaped_code
+            html += "</code></pre>"
+            return html
+
+
     def parse(self, text):
-        return m.html(text)
+        rendered = self.BlogRenderer()
+        md = m.Markdown(rendered, extensions=m.EXT_FENCED_CODE)
+        return md.render(text)
