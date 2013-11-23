@@ -10,6 +10,7 @@ from parsers import MisakaWrapper
 from pagination import BlogPagination
 import uuid
 import re
+import logging
 
 app = Flask(__name__)
 app.config.update(SETTINGS)
@@ -100,6 +101,10 @@ def blog_detail(post_name):
 
 if __name__ == '__main__':
     Ink(app)
+
+    log_file = logging.FileHandler(SETTINGS['LOG_LOCATION'])
+    log_file.setLevel(logging.ERROR)
+    app.logger.addHandler(log_file)
 
     app.jinja_env.globals.update(load_asset=load_asset)
     app.run(host=app.config['HOST'])
