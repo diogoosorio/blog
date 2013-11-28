@@ -96,7 +96,13 @@ def blog_detail(post_name):
     if not entry:
         abort(404)
 
-    return render_template('detail.html', entry=entry)
+    template_variables = {
+        'entry': entry,
+        'title': entry['meta'].get('title'),
+        'description': entry['meta'].get('description')
+    }
+
+    return render_template('detail.html', **template_variables)
 
 
 Ink(app)
