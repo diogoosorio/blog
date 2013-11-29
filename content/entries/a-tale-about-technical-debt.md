@@ -23,7 +23,7 @@ You know prototyping is for losers. As an hard-core 'coder' like yourself proudl
 
 Being arrogant just comes with the job. They actually force you to be that way in order to get the job done right. How would you dismiss those no-good colleagues of yours, always yielding unasked for opinions, always pointing out the poor design choices you're making. Jealousy, they're all fuck*ng jealous, that's all.
 
-Go ask the marketing department who they love the most. You're a doer so they can take their 'design principles' and shove them up your ass. The things these guys come up with to justify laziness...
+Go ask the marketing department who they love the most. You're a doer so they can take their 'design principles' and shove them up their asses. The things these guys come up with to justify laziness...
 
 Yeah, the product team hates them. You've even heard (more than once, actually) colleagues asserting that that new feature asked for doesn't make sense. 
 
@@ -106,6 +106,6 @@ I also believe that those compromises should be exceptions, not the norm. And be
 *   At the end of the day you're a professional. Be proud of the code you produce, sure it has to work properly, sure you have to deliver it on time, but try to leave your code the way you'd like to find the code of someone else's project code you'd have to maintain.
     Be proud when someone praises your tidiness. It's a clear sign of professionalism.
 
-*   If you're constantly 'breaking windows'/'cutting corners' in your project in order to keep up with deadlines, something is (structural) is wrong either with you, your team, or your company. Work on fixing that.
+*   If you're constantly 'breaking windows'/'cutting corners' in your project in order to keep up with deadlines, something is (structurally) wrong either with you, your team, or your company. Work on fixing that.
 
-    A corner cut should be an exception and (if you're doing it right) it's should throb on the back of your mind for the rest of the project's life.
+    A corner cut should be an exception and (if you're doing it right) it's something that should throb on the back of your mind for the rest of the project's life.
