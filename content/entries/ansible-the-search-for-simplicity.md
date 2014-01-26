@@ -57,6 +57,7 @@ tasks:
 
 Want to declare a loop?
 
+```
 ---
 tasks:
     - name: install dependencies
