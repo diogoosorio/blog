@@ -35,7 +35,7 @@ def before_request():
 
     # pagination
     page = request.args.get('page')
-    page = int(page) if page is not None else 1
+    page = int(page) if page is not None and page.isdigit() else 1
     g.page = page
 
 
@@ -89,7 +89,7 @@ def page_not_found(e):
 
 
 @cache.memoize(timeout=3600)
-@app.route('/blog/<post_name>')
+@app.route(u'/blog/<post_name>')
 def blog_detail(post_name):
     entry = g.repository.getfile('entries', post_name)
 
