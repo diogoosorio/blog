@@ -9,8 +9,8 @@ environemnt = environment.lower() if environment is not None else 'production'
 SETTINGS = {
     'DEBUG': False,
     'TESTING': False,
-    'SECRET_KEY': 'sample-secret-key',
-    'HOST': '0.0.0.0',
+    'SECRET_KEY': os.urandom(24), # TODO
+    'HOST': '127.0.0.1',
     'SESSION_COOKIE_DOMAIN': 'diogoosorio.com',
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
