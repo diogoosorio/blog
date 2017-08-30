@@ -42,6 +42,7 @@ nosetests.xml
 # Virtualenv
 venv/*
 uwsgi.pid
+env/*
 
 # Logging
 logs/*
