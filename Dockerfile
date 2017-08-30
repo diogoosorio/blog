@@ -12,4 +12,6 @@ COPY . /app
 
 RUN mkdir -p /www/diogoosorio.com/logs/
 
-RUN python blog_app/blog_app.py
+EXPOSE 5000
+
+CMD uwsgi --ini blog_app.ini

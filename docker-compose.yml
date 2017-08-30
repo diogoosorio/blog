@@ -5,11 +5,28 @@ services:
     build: .
     container_name: blog
     depends_on:
-       - memcached
+      - memcached
     environment:
-       - FLASK_SECRET
-       - ENVIRONMENT
+      - FLASK_SECRET
+      - ENVIRONMENT
+    ports:
+      - 4000:4000
 
   memcached:
     image: memcached:1.5
     container_name: memcached
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    depends_on:
+      - blog
+    volumes:
+      - ./etc/nginx/diogoosorio.conf:/etc/nginx/conf.d/diogoosorio.conf
+      - nginx-logs:/www/diogoosorio.com/logs/nginx
+    ports:
+      - 80:80
+      - 443:443
+
+volumes:
+  nginx-logs:

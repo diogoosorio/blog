@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from bs4 import BeautifulSoup
+
+import bs4
 import misaka as m
 import re
 import datetime
@@ -10,15 +12,15 @@ import houdini as h
 class Helper(object):
     @staticmethod
     def striptags(html):
-        return ''.join(BeautifulSoup.BeautifulSoup(html).findAll(text=True))
+        return ''.join(BeautifulSoup(html).findAll(text=True))
 
 class BaseParser(object):
 
     EXCERPT_MAX_LENGTH = 600
 
     def extractfilemeta(self, filepath):
-        with file(filepath) as f:
-            content = f.read().decode('utf-8')
+        with open(filepath, 'r') as f:
+            content = f.read()
 
         return self.extractmeta(content)
 
@@ -48,7 +50,7 @@ class BaseParser(object):
         return [final_meta, content]
 
     def make_excerpt(self, content):
-        soup = BeautifulSoup.BeautifulSoup(content)
+        soup = BeautifulSoup(content)
 
         p = soup.p
         if p is None:
@@ -63,7 +65,7 @@ class BaseParser(object):
 
             # BeautifulSoup was returning newline characters as the next sibling,
             # we want to discard those...
-            if not isinstance(next_element, BeautifulSoup.Tag):
+            if not isinstance(next_element, bs4.element.Tag):
                 continue
 
             validtag = next_element.name.lower() == 'p'
@@ -91,5 +93,4 @@ class MisakaWrapper(BaseParser):
     def parse(self, text):
         rendered = self.BlogRenderer()
         md = m.Markdown(rendered, extensions=m.EXT_FENCED_CODE)
-        html = md.render(text)
-        return html
+        return md(text)
