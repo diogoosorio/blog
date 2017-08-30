@@ -1,6 +1,23 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="9">
+            <item index="0" class="java.lang.String" itemvalue="Flask-Ink" />
+            <item index="1" class="java.lang.String" itemvalue="Flask-Cache" />
+            <item index="2" class="java.lang.String" itemvalue="pylibmc" />
+            <item index="3" class="java.lang.String" itemvalue="BeautifulSoup" />
+            <item index="4" class="java.lang.String" itemvalue="flask-paginate" />
+            <item index="5" class="java.lang.String" itemvalue="html2text" />
+            <item index="6" class="java.lang.String" itemvalue="misaka" />
+            <item index="7" class="java.lang.String" itemvalue="Flask" />
+            <item index="8" class="java.lang.String" itemvalue="houdini.py" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
     <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
       <option name="processCode" value="true" />
       <option name="processLiterals" value="true" />
