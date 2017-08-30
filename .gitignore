@@ -46,3 +46,6 @@ env/*
 
 # Logging
 logs/*
+
+# Docker
+.env

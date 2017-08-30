@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  blog:
+    build: .
+    container_name: blog
+    depends_on:
+       - memcached
+    environment:
+       - FLASK_SECRET
+       - ENVIRONMENT
+
+  memcached:
+    image: memcached:1.5
+    container_name: memcached

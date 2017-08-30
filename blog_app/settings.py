@@ -29,7 +29,8 @@ CACHE_SETTINGS = {
     'CACHE_TYPE': 'memcached',
     'CACHE_DEFAULT_TIMEOUT': 25,
     'CACHE_KEY_PREFIX': 'diogoo_blog_',
-    'CACHE_DIR': '/tmp/diogoosorio.com/cache'
+    'CACHE_DIR': '/tmp/diogoosorio.com/cache',
+    'CACHE_MEMCACHED_SERVER': 'memcached',
 }
 
 if environment == 'development':

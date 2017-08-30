@@ -1,8 +1,8 @@
 #!/usr/env/python
 # -*- coding: utf-8 -*-
 
-from flask.ext.paginate import Pagination
-from BeautifulSoup import BeautifulSoup
+from flask_paginate import Pagination
+from bs4 import BeautifulSoup
 
 class BlogPagination(Pagination):
     """

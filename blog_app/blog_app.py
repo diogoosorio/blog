@@ -3,7 +3,7 @@
 
 from flask import Flask, redirect, render_template, url_for, g, abort, request, make_response
 from flask_ink.ink import Ink
-from flask.ext.cache import Cache
+from flask_cache import Cache
 from settings import SETTINGS, CACHE_SETTINGS
 from repository import LocalRepository
 from parsers import MisakaWrapper

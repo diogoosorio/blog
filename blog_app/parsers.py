@@ -1,7 +1,7 @@
 #!/usr/env/python
 # -*- coding: utf-8 -*-
 
-import BeautifulSoup
+from bs4 import BeautifulSoup
 import misaka as m
 import re
 import datetime

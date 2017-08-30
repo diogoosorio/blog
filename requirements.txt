@@ -1,9 +1,9 @@
 Flask==0.12.2
-Flask-Ink==2.2.1
+Flask-Ink==3.1.10
 html2text==2016.9.19
 Flask-Cache==0.13.1
 misaka==2.1.0
-BeautifulSoup==3.2.1
+beautifulsoup4==4.6.0
 flask-paginate==0.5.0
 houdini.py==0.1.0
 pylibmc==1.5.2
