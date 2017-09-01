@@ -49,3 +49,4 @@ logs/*
 
 # Docker
 .env
+*.swp

@@ -55,15 +55,14 @@
 {% block content %}
 <div class="ink-grid">
     <div class="column-group gutters">
-        <div class="large-20 medium-100 small-100">
+        <div class="all-100 large-20 xlarge-20">
             <aside id="sidebar">
                 {% include 'partials/sidebar.html' %}
             </aside>
         </div>
-        <div class="large-60 medium-100 small-100">
+        <div class="all-100 large-80 xlarge-80">
             {% block blog_content %}{% endblock %}
         </div>
-        <div class="large-20 hide-all show-large"></div>
     </div>
 </div>
 {% endblock %}

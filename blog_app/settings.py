@@ -22,7 +22,8 @@ SETTINGS = {
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',
     'ENVIRONMENT': environment,
-    'DISQUS_SHORTNAME': 'diogoosorio'
+    'DISQUS_SHORTNAME': 'diogoosorio',
+    'BS4_PARSER': 'html.parser',
 }
 
 CACHE_SETTINGS = {

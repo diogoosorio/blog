@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from bs4 import BeautifulSoup
+from settings import SETTINGS
 
 import bs4
 import misaka as m
@@ -10,9 +11,13 @@ import datetime
 import houdini as h
 
 class Helper(object):
+    @classmethod
+    def striptags(cls, html):
+        return ''.join(cls.parse(html).findAll(text=True))
+
     @staticmethod
-    def striptags(html):
-        return ''.join(BeautifulSoup(html).findAll(text=True))
+    def parse(html):
+        return BeautifulSoup(html, SETTINGS.get('BS4_PARSER'))
 
 class BaseParser(object):
 
@@ -50,7 +55,7 @@ class BaseParser(object):
         return [final_meta, content]
 
     def make_excerpt(self, content):
-        soup = BeautifulSoup(content)
+        soup = Helper.parse(content)
 
         p = soup.p
         if p is None:
@@ -74,7 +79,7 @@ class BaseParser(object):
         if next_sibling:
             excerpt.append(next_sibling.renderContents())
 
-        return "\n".join('<p>{0}</p>'.format(p) for p in excerpt)
+        return "\n".join('<p>{0}</p>'.format(p.decode('utf-8')) for p in excerpt)
 
 
 
