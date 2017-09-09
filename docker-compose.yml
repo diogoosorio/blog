@@ -15,14 +15,15 @@ services:
     container_name: memcached
 
   nginx:
-    image: nginx:1.13
+    build: ./etc/nginx
     container_name: nginx
     depends_on:
       - blog
     volumes:
       - ./etc/nginx/diogoosorio.conf:/etc/nginx/conf.d/diogoosorio.conf
       - nginx-logs:/www/diogoosorio.com/logs/nginx
-      - nginx-certs:/etc/nginx/certs
+      - nginx-certs:/www/diogoosorio.com/certs
+      - nginx-root:/www/diogoosorio.com/root
     ports:
       - 80:80
       - 443:443
@@ -30,3 +31,4 @@ services:
 volumes:
   nginx-logs:
   nginx-certs:
+  nginx-root:
