@@ -1,8 +1,6 @@
-[![Build Status](https://travis-ci.org/diogoosorio/blog.svg?branch=master)](https://travis-ci.org/diogoosorio/blog)
-
 ## Welcome to Diogo's personal blog
 
-My poor attempt of writing a small static blog generator (à la [Jekyll][1]). This time the main weapons of choice were [Python][2] and [Flask][3].
+My poor attempt of writing a small static blog generator (à la Jekyll). This time the main weapons of choice were Python and Flask.
 
 During this first (quick) iteration, the blog entries are being loaded and parsed from the hard-drive when a request comes in. In the near future, the objective is to have this proccess automatized, whenever a blog entry is edited/added (add a watch operation).
 
