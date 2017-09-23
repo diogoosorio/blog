@@ -75,7 +75,7 @@ def rss():
 
 
 @app.errorhandler(404)
-def page_not_found():
+def page_not_found(_e):
     path = request.path
     legacy_match = re.match(r'^/blog/entry/([\w-]+)/?$', path, re.I)
 
