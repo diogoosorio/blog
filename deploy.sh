@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-set -o errexit
-set -o pipefail
-set -o nounset
-
-eval "$(ssh-agent -s)"
-echo "$SSH_DEPLOY_KEY" > /tmp/deploy_rsa
-chmod 0600 /tmp/deploy_rsa
-ssh-add /tmp/deploy_rsa
-
 ssh $SSH_DEPLOY_USER@diogoosorio.com <<ENDSSH
   set -o errexit
   set -o pipefail
