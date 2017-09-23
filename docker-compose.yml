@@ -11,6 +11,8 @@ services:
       - ENVIRONMENT
     ports:
       - 4000:4000
+    volumes:
+      - .:/app
 
   memcached:
     image: memcached:1.5

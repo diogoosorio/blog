@@ -20,7 +20,7 @@ To run the blog, do the following:
 
 ```bash
 cp env.sample .env # edit the secrets present there
-docker-compose -f docker-compose.yml -f docker-compose.development.yml up -d blog
+docker-compose up -d
 ```
 
 The http server should be listening on port 4000.
