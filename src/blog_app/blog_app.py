@@ -1,10 +1,9 @@
 import uuid
 import re
-import logging
 
 from flask import Flask, redirect, render_template, url_for, g, abort, request, make_response
 from flask_ink.ink import Ink
-from flask_cache import Cache
+from flask_caching import Cache
 
 from .settings import SETTINGS, CACHE_SETTINGS
 from .repository import LocalRepository
@@ -16,14 +15,9 @@ def build_app():
     _app = Flask(__name__)
     _app.config.update(SETTINGS)
 
-    _cache = Cache(config=CACHE_SETTINGS)
-    _cache.init_app(_app)
+    _cache = Cache(_app, config=CACHE_SETTINGS)
 
     Ink(_app)
-
-    _logger = logging.FileHandler(SETTINGS['LOG_LOCATION'])
-    _logger.setLevel(logging.ERROR)
-    _app.logger.addHandler(_logger)
 
     return [_app, _cache]
 

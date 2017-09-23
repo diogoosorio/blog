@@ -11,7 +11,6 @@ SETTINGS = {
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
     'REPO_DIRECTORY': os.path.join(os.path.dirname(__file__), '..', 'content'),
-    'LOG_LOCATION': '/www/diogoosorio.com/logs/flask.log',
     'PAGESIZE': 5,
     'MINIFY_ASSETS': False,
     'INK_ASSET_MINIFY': True,
@@ -38,6 +37,5 @@ if ENVIRONMENT == 'development':
     SETTINGS['INK_ASSET_MINIFY'] = False
     SETTINGS['DISQUS_SHORTNAME'] = 'diogoosorio-blog-dev'
     SETTINGS['REPO_DIRECTORY'] = '/workspace/blog/content'
-    SETTINGS['LOG_LOCATION'] = '/tmp/diogoosorio.com_flask.log'
 
     CACHE_SETTINGS['CACHE_TYPE'] = 'null'
