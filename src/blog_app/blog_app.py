@@ -1,36 +1,33 @@
-#!/usr/env/python
-# -*- coding: utf-8 -*-
-
-from flask import Flask, redirect, render_template, url_for, g, abort, request, make_response
-from flask_ink.ink import Ink
-from flask_cache import Cache
-from settings import SETTINGS, CACHE_SETTINGS
-from repository import LocalRepository
-from parsers import MisakaWrapper
-from pagination import BlogPagination
 import uuid
 import re
-import logging
 
-app = Flask(__name__)
-app.config.update(SETTINGS)
+from flask import Flask, redirect, render_template, g, abort, request, make_response
+from flask_ink.ink import Ink
+from flask_caching import Cache
 
-cache = Cache(config=CACHE_SETTINGS)
-cache.init_app(app)
+from .settings import SETTINGS, CACHE_SETTINGS
+from .repository import LocalRepository
+from .parsers import BlogParser
+from .pagination import BlogPagination
 
-def load_asset(filename):
-    environment = app.config['ENVIRONMENT']
 
-    if environment != 'development' and app.config['MINIFY_ASSETS']:
-        filename = '%s.min.%s' % tuple(filename.rsplit('.', 1))
+def build_app():
+    _app = Flask(__name__)
+    _app.config.update(SETTINGS)
 
-    return url_for('static', filename=filename)
+    _cache = Cache(_app, config=CACHE_SETTINGS)
 
+    Ink(_app)
+
+    return [_app, _cache]
+
+
+app, cache = build_app() # pylint: disable=invalid-name
 
 @app.before_request
 def before_request():
     content_dir = app.config['REPO_DIRECTORY']
-    parser = MisakaWrapper()
+    parser = BlogParser()
     g.repository = LocalRepository(content_dir, parser, cache, app.config['PAGESIZE'])
 
     # pagination
@@ -48,7 +45,11 @@ def index():
 @app.route('/blog/')
 def blog():
     template_variables = g.repository.getfiles('entries', g.page)
-    template_variables['pagination'] = BlogPagination(page=g.page, total=template_variables['total'], per_page=app.config['PAGESIZE'])
+    template_variables['pagination'] = BlogPagination(
+        page=g.page,
+        total=template_variables['total'],
+        per_page=app.config['PAGESIZE']
+    )
 
     if not template_variables['entries']:
         abort(404)
@@ -63,9 +64,9 @@ def rss():
 
     g.repository.pagesize = 1
     last_entry = g.repository.getfiles('entries', 1)
-    last_entry = last_entry['entries'][0] if len(last_entry['entries']) else None
+    last_entry = last_entry['entries'][0] if last_entry['entries'] else None
 
-    template_variables['uuid'] = uuid # TODO: This logic shouldn't be on the template...
+    template_variables['uuid'] = uuid
     template_variables['last_entry'] = last_entry
 
     response = make_response(render_template('atom.xml', **template_variables))
@@ -74,7 +75,7 @@ def rss():
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(_e):
     path = request.path
     legacy_match = re.match(r'^/blog/entry/([\w-]+)/?$', path, re.I)
 
@@ -104,14 +105,6 @@ def blog_detail(post_name):
 
     return render_template('detail.html', **template_variables)
 
-
-Ink(app)
-
-log_file = logging.FileHandler(SETTINGS['LOG_LOCATION'])
-log_file.setLevel(logging.ERROR)
-app.logger.addHandler(log_file)
-
-app.jinja_env.globals.update(load_asset=load_asset)
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'])

@@ -1,8 +1,5 @@
-#!/usr/env/python
-# -*- coding: utf-8 -*-
-
-from parsers import Helper
 from flask_paginate import Pagination
+from .parsers import Helper
 
 class BlogPagination(Pagination):
     """
@@ -14,7 +11,7 @@ class BlogPagination(Pagination):
 
     @property
     def links(self):
-        links = Pagination.links.fget(self)
+        links = super().links
         soup = Helper.parse(links)
         soup.ul['class'] = "pagination black rounded shadowed separated push-right"
         return soup.renderContents().decode('utf-8')

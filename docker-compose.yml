@@ -9,26 +9,11 @@ services:
     environment:
       - FLASK_SECRET
       - ENVIRONMENT
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/app
 
   memcached:
     image: memcached:1.5
     container_name: memcached
-
-  nginx:
-    build: ./etc/nginx
-    container_name: nginx
-    depends_on:
-      - blog
-    volumes:
-      - ./etc/nginx/diogoosorio.conf:/etc/nginx/conf.d/diogoosorio.conf
-      - nginx-logs:/www/diogoosorio.com/logs/nginx
-      - nginx-certs:/www/diogoosorio.com/certs
-      - nginx-root:/www/diogoosorio.com/root
-    ports:
-      - 80:80
-      - 443:443
-
-volumes:
-  nginx-logs:
-  nginx-certs:
-  nginx-root:

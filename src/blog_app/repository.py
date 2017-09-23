@@ -1,13 +1,10 @@
-#!/usr/env/python
-# -*- coding: utf-8 -*-
+import os
 
-import os, math
-
-class LocalRepository(object):
+class LocalRepository:
 
     CACHE_GETFILES_TIMEOUT = 3600
 
-    def __init__(self, base_dir, parser, cache = None, pagesize = 5):
+    def __init__(self, base_dir, parser, cache=None, pagesize=5):
         self.base_dir = os.path.abspath(base_dir)
         self.parser = parser
         self.cache = cache
@@ -15,7 +12,7 @@ class LocalRepository(object):
 
         self.testdir(self.base_dir)
 
-    def getfile(self,directory, slug):
+    def getfile(self, directory, slug):
         cache_key = "file-detail-{}".format(slug)
         entry = self.cache.get(cache_key)
 
@@ -61,6 +58,7 @@ class LocalRepository(object):
         return sliced_files
 
 
-    def testdir(self, directory):
+    @staticmethod
+    def testdir(directory):
         if not os.path.exists(directory):
             raise RuntimeError("The repository path doesn't exist.")

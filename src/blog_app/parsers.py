@@ -1,31 +1,38 @@
-#!/usr/env/python
-# -*- coding: utf-8 -*-
-
-from bs4 import BeautifulSoup
-from settings import SETTINGS
-
-import bs4
-import misaka as m
-import re
 import datetime
-import houdini as h
+import re
+from html import escape as escape_html
+import bs4
+import misaka
 
-class Helper(object):
+from .settings import SETTINGS
+
+class Helper():
     @classmethod
     def striptags(cls, html):
         return ''.join(cls.parse(html).findAll(text=True))
 
     @staticmethod
     def parse(html):
-        return BeautifulSoup(html, SETTINGS.get('BS4_PARSER'))
+        return bs4.BeautifulSoup(html, SETTINGS.get('BS4_PARSER'))
 
-class BaseParser(object):
+
+class BlogHtmlRenderer(misaka.HtmlRenderer):
+    @staticmethod
+    def block_code(code, language):
+        html = "<pre><code"
+        html += " data-language=\"{0}\">".format(language) if language else ">"
+        html += escape_html(code)
+        html += "</code></pre>"
+        return html
+
+
+class BlogParser():
 
     EXCERPT_MAX_LENGTH = 600
 
     def extractfilemeta(self, filepath):
-        with open(filepath, 'r') as f:
-            content = f.read()
+        with open(filepath, 'r') as file:
+            content = file.read()
 
         return self.extractmeta(content)
 
@@ -33,9 +40,6 @@ class BaseParser(object):
         parts = re.split('-{4}', text)
         meta = parts[1].strip()
         content = "----".join(parts[2:]).strip()
-
-        if not hasattr(self, 'meta_pattern'):
-            self.meta_pattern = re.compile('([\w]+):(.+)', re.M)
 
         meta_matches = re.findall(self.meta_pattern, meta)
         final_meta = {}
@@ -48,22 +52,27 @@ class BaseParser(object):
 
             final_meta[key] = val
 
-        content = self.parse(content)
+        content = self.parse_content(content)
         final_meta['excerpt'] = self.make_excerpt(content)
         final_meta['excerpt_nohtml'] = Helper.striptags(final_meta['excerpt'])
 
         return [final_meta, content]
 
-    def make_excerpt(self, content):
+    @staticmethod
+    def parse_content(content):
+        return misaka.Markdown(BlogHtmlRenderer(), extensions=('fenced-code',))(content)
+
+    @staticmethod
+    def make_excerpt(content):
         soup = Helper.parse(content)
 
-        p = soup.p
-        if p is None:
+        paragraph = soup.p
+        if paragraph is None:
             return content
 
-        excerpt = [p.renderContents()]
+        excerpt = [paragraph.renderContents()]
         next_sibling = None
-        next_element = p
+        next_element = paragraph
 
         while next_sibling is None:
             next_element = next_element.nextSibling
@@ -81,21 +90,6 @@ class BaseParser(object):
 
         return "\n".join('<p>{0}</p>'.format(p.decode('utf-8')) for p in excerpt)
 
-
-
-class MisakaWrapper(BaseParser):
-
-    class BlogRenderer(m.HtmlRenderer):
-        def block_code(self, code, language):
-            escaped_code = h.escape_html(code)
-            html = "<pre><code"
-            html += " data-language=\"{0}\">".format(language) if language else ">"
-            html += escaped_code
-            html += "</code></pre>"
-            return html
-
-
-    def parse(self, text):
-        rendered = self.BlogRenderer()
-        md = m.Markdown(rendered, extensions=m.EXT_FENCED_CODE)
-        return md(text)
+    @property
+    def meta_pattern(self):
+        return re.compile(r'([\w]+):(.+)', re.M)

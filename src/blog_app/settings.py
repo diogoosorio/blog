@@ -1,10 +1,6 @@
-#!/usr/env/python
-# -*- coding: utf-8 -*-
-
 import os
 
-environment = os.environ.get('ENVIRONMENT')
-environemnt = environment.lower() if environment is not None else 'production'
+ENVIRONMENT = os.environ.get('ENVIRONMENT', 'production')
 
 SETTINGS = {
     'DEBUG': False,
@@ -14,14 +10,12 @@ SETTINGS = {
     'SESSION_COOKIE_DOMAIN': 'diogoosorio.com',
     'SESSION_COOKIE_HTTPONLY': True,
     'SESSION_COOKIE_SECURE': False,
-    'REPO_DIRECTORY': os.path.join(os.path.dirname(__file__), '..', 'content'),
-    'LOG_LOCATION': '/www/diogoosorio.com/logs/flask.log',
+    'REPO_DIRECTORY': os.path.join(os.path.dirname(__file__), '..', '..', 'content'),
     'PAGESIZE': 5,
-    'MINIFY_ASSETS': False,
     'INK_ASSET_MINIFY': True,
     'INK_ASSET_VERSION': '2.2.1',
     'INK_ASSET_DEFAULT_LOCATION': 'local',
-    'ENVIRONMENT': environment,
+    'ENVIRONMENT': ENVIRONMENT,
     'DISQUS_SHORTNAME': 'diogoosorio',
     'BS4_PARSER': 'html.parser',
 }
@@ -34,14 +28,13 @@ CACHE_SETTINGS = {
     'CACHE_MEMCACHED_SERVERS': ('memcached',),
 }
 
-if environment == 'development':
+if ENVIRONMENT == 'development':
     SETTINGS['DEBUG'] = True
     SETTINGS['TESTING'] = True
-    SETTINGS['SESSION_COOKIE_DOMAIN'] = None,
+    SETTINGS['SESSION_COOKIE_DOMAIN'] = None
     SETTINGS['SERVER_NAME'] = None
     SETTINGS['INK_ASSET_MINIFY'] = False
     SETTINGS['DISQUS_SHORTNAME'] = 'diogoosorio-blog-dev'
     SETTINGS['REPO_DIRECTORY'] = '/workspace/blog/content'
-    SETTINGS['LOG_LOCATION'] = '/tmp/diogoosorio.com_flask.log'
 
     CACHE_SETTINGS['CACHE_TYPE'] = 'null'

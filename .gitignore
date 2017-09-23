@@ -50,3 +50,4 @@ logs/*
 # Docker
 .env
 *.swp
+docker-compose.override.yml
