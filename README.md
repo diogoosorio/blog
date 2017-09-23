@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/diogoosorio/blog.svg?branch=master)](https://travis-ci.org/diogoosorio/blog)
+
 ## Welcome to Diogo's personal blog
 
 My poor attempt of writing a small static blog generator (à la Jekyll). This time the main weapons of choice were Python and Flask.
