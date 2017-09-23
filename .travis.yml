@@ -7,3 +7,4 @@ services:
 
 script:
   - docker build -t diogoosorio/blog .
+  - docker run --rm diogoosorio/blog pylint blog_app
