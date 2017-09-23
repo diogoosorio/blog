@@ -11,6 +11,6 @@ RUN apt-get update && \
 
 COPY . /app
 
-EXPOSE 5000
+EXPOSE 4000
 
 CMD uwsgi --ini blog_app.ini
