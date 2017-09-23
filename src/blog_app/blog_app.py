@@ -1,7 +1,7 @@
 import uuid
 import re
 
-from flask import Flask, redirect, render_template, url_for, g, abort, request, make_response
+from flask import Flask, redirect, render_template, g, abort, request, make_response
 from flask_ink.ink import Ink
 from flask_caching import Cache
 
