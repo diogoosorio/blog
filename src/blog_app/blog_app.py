@@ -24,15 +24,6 @@ def build_app():
 
 app, cache = build_app() # pylint: disable=invalid-name
 
-@app.context_processor
-def load_asset(filename):
-    environment = app.config['ENVIRONMENT']
-
-    if environment != 'development' and app.config['MINIFY_ASSETS']:
-        filename = '%s.min.%s' % tuple(filename.rsplit('.', 1))
-
-    return url_for('static', filename=filename)
-
 @app.before_request
 def before_request():
     content_dir = app.config['REPO_DIRECTORY']
